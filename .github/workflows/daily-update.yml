@@ -45,17 +45,21 @@ jobs:
       - name: Generate extended HTML report
         run: python scripts/generate_html_extended.py
 
+      - name: Prepare pages output
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          cp -r multi-asset-technical-analysis _site/
+          cp -r new-assets-right-side _site/
+          cp -r fund-technical-analysis _site/
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: |
-            index.html
-            multi-asset-technical-analysis/
-            new-assets-right-side/
-            fund-technical-analysis/
+          path: _site
 
       - name: Deploy to GitHub Pages
         id: deployment
