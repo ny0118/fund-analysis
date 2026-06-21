@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>多品种多周期技术分析报告</title>
+<script src="../_shared/js/echarts.min.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    background: #0f172a;
+    color: #e2e8f0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #e2e8f0;
+}
+h1 .accent { color: #3b82f6; }
+.subtitle {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+.section-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 30px 0 15px;
+    padding-left: 12px;
+    border-left: 4px solid #3b82f6;
+    color: #e2e8f0;
+}
+.card {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #334155;
+}
+.card:hover {
+    background: #263548;
+}
+/* 评分规则说明 */
+.rules-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.rule-box {
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
+    padding: 16px;
+}
+.rule-box h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.rule-box.right h3 { color: #3b82f6; }
+.rule-box.left h3 { color: #f59e0b; }
+.rule-box ul {
+    list-style: none;
+    padding: 0;
+}
+.rule-box li {
+    font-size: 13px;
+    color: #94a3b8;
+    padding: 3px 0;
+}
+.rule-box li::before {
+    content: "•";
+    margin-right: 6px;
+    color: #8896ab;
+}
+/* 概览表 */
+.overview-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+.overview-table th {
+    background: #1a2332;
+    padding: 12px 10px;
+    text-align: center;
+    font-weight: 600;
+    color: #94a3b8;
+    border-bottom: 2px solid #334155;
+    white-space: nowrap;
+}
+.overview-table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #334155;
+    white-space: nowrap;
+}
+.overview-table tr:hover td {
+    background: rgba(255,255,255,0.03);
+}
+.signal-badge {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+}
+/* 信号卡片网格 */
+.signal-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+.signal-card {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #334155;
+    transition: transform 0.2s;
+}
+.signal-card:hover {
+    transform: translateY(-2px);
+}
+.signal-card .asset-name {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+.signal-card .asset-category {
+    font-size: 12px;
+    color: #94a3b8;
+    margin-bottom: 10px;
+}
+.signal-card .signal-text {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+.signal-card .score-detail {
+    font-size: 12px;
+    color: #94a3b8;
+    line-height: 1.8;
+}
+/* 图表容器 */
+.chart-container {
+    width: 100%;
+    height: 400px;
+}
+.chart-container-tall {
+    width: 100%;
+    height: 500px;
+}
+/* 品种详情卡片 */
+.asset-detail {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    border: 1px solid #334155;
+}
+.asset-detail .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.asset-detail .header h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+.asset-detail .header .price-info {
+    text-align: right;
+    font-size: 14px;
+    color: #94a3b8;
+}
+.asset-detail .header .price-info .price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #e2e8f0;
+}
+.period-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+.period-table th {
+    background: #1a2332;
+    padding: 10px 8px;
+    text-align: center;
+    font-weight: 600;
+    color: #94a3b8;
+    border-bottom: 2px solid #334155;
+    white-space: nowrap;
+}
+.period-table td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #334155;
+    font-size: 12px;
+}
+.period-table tr:hover td {
+    background: rgba(255,255,255,0.03);
+}
+.period-table .indicator-name {
+    font-weight: 600;
+    color: #e2e8f0;
+}
+.period-table .detail-text {
+    color: #94a3b8;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.period-table .right-section {
+    border-left: 2px solid #3b82f6;
+}
+.period-table .left-section {
+    border-left: 2px solid #f59e0b;
+}
+@media (max-width: 768px) {
+    .rules-grid { grid-template-columns: 1fr; }
+    body { padding: 10px; }
+    .overview-table { font-size: 12px; }
+    .period-table { font-size: 11px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>多品种多周期<span class="accent">技术分析</span>报告</h1>
+<p class="subtitle">报告日期：<span id="report-date">2026-06-21</span> | 分析品种：<span id="asset-count">6</span> 个 | 覆盖周期：日线 / 周线 / 月线 / 季线 / 年线</p>
+
+<!-- 评分规则说明 -->
+<div class="section-title">评分规则说明</div>
+<div class="card">
+<div class="rules-grid">
+    <div class="rule-box right">
+        <h3>右侧交易指标（趋势跟踪）</h3>
+        <ul>
+            <li><strong>EMA(12,52)</strong>：EMA12上穿EMA52记 +1（看多），下穿记 -1（看空），否则 0</li>
+            <li><strong>MACD(12,26,9)</strong>：柱状线由负转正或DIF上穿零轴记 +1，反向记 -1，否则 0</li>
+        </ul>
+        <p style="margin-top:8px;font-size:12px;color:#8896ab;">右侧指标：顺势而为，确认趋势后入场</p>
+    </div>
+    <div class="rule-box left">
+        <h3>左侧交易指标（逆势抄底/逃顶）</h3>
+        <ul>
+            <li><strong>RSI(14)</strong>：RSI从30以下向上突破记 +1（超卖回升），从70以上向下跌破记 -1（超买回落），否则 0</li>
+            <li><strong>KDJ(9,3,3)</strong>：J值&lt;0 记 +1（极端超卖），J值&gt;100 记 -1（极端超买），否则 0</li>
+            <li><strong>BOLL(20,2)</strong>：价格跌破下轨记 +1（超卖抄底），突破上轨记 -1（超买逃顶），否则 0</li>
+        </ul>
+        <p style="margin-top:8px;font-size:12px;color:#8896ab;">左侧指标：逆势操作，在极端位置寻找反转机会</p>
+    </div>
+</div>
+<div style="margin-top:12px;font-size:13px;color:#94a3b8;">
+    <strong>评分规则</strong>：每个指标在每个周期独立打分 +1/-1/0；左侧和右侧分别统计正分和负分，正负分不抵消分别累加；综合信号：仅正分=偏多，仅负分=偏空，有正有负=分化，全零=中性。
+</div>
+</div>
+
+<!-- 综合概览表 -->
+<div class="section-title">综合概览</div>
+<div class="card" style="overflow-x:auto;">
+<table class="overview-table">
+<thead>
+<tr>
+    <th>品种</th>
+    <th>类别</th>
+    <th>最新价格</th>
+    <th>日期</th>
+    <th>日均交易额</th>
+    <th>右侧正分</th>
+    <th>右侧负分</th>
+    <th>左侧正分</th>
+    <th>左侧负分</th>
+    <th>综合信号</th>
+</tr>
+</thead>
+<tbody id="overview-tbody">
+</tbody>
+</table>
+</div>
+
+<!-- 综合信号得分卡片 -->
+<div class="section-title">综合信号</div>
+<div class="signal-cards" id="signal-cards">
+</div>
+
+<!-- 左右信号分布堆叠柱状图 -->
+<div class="section-title">左右侧信号分布</div>
+<div class="card">
+<div class="chart-container" id="chart-signal-dist"></div>
+</div>
+
+<!-- 各品种五周期正负分对比图 -->
+<div class="section-title">各品种五周期正负分对比</div>
+<div class="card">
+<div class="chart-container-tall" id="chart-period-compare"></div>
+</div>
+
+<!-- 热力图 -->
+<div class="section-title">技术指标信号热力图</div>
+<div class="card">
+<div class="chart-container-tall" id="chart-heatmap"></div>
+</div>
+
+<!-- 各品种详细分析 -->
+<div class="section-title">各品种详细分析</div>
+<div id="asset-details">
+</div>
+
+</div>
+
+<script>
+// ============================================================
+// 嵌入数据
+// ============================================================
+var DATA = {"BTC": {"name": "比特币", "symbol": "BTCUSDT", "category": "加密货币", "current_price": 64272.0, "current_date": "2026-06-21", "avg_daily_volume_usd": 1684005971.09, "composite_signal": "中性", "composite_scores": {"right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}, "analysis": {"daily": {"last_close": 64272.0, "last_date": "2026-06-21", "ema": {"score": 0, "detail": "EMA12位于EMA52下方，未发生交叉"}, "macd": {"score": 0, "detail": "MACD柱状线为正，未发生转换"}, "rsi": {"score": 0, "detail": "RSI中性（40.5），未突破阈值"}, "kdj": {"score": 0, "detail": "J值中性（30.1），未进入极端区间"}, "boll": {"score": 0, "detail": "价格在BOLL轨道内运行"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}, "weekly": {"last_close": 64272.0, "last_date": "2026-06-26", "ema": {"score": 0, "detail": "EMA12位于EMA52下方，未发生交叉"}, "macd": {"score": 0, "detail": "MACD柱状线为负，未发生转换"}, "rsi": {"score": 0, "detail": "RSI中性（35.8），未突破阈值"}, "kdj": {"score": 0, "detail": "J值中性（3.8），未进入极端区间"}, "boll": {"score": 0, "detail": "价格在BOLL轨道内运行"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}, "monthly": {"last_close": 64272.0, "last_date": "2026-06-30", "ema": {"score": 0, "detail": "数据不足，无法计算EMA(12,52)"}, "macd": {"score": 0, "detail": "数据不足，无法计算MACD"}, "rsi": {"score": 0, "detail": "RSI中性（39.8），未突破阈值"}, "kdj": {"score": 0, "detail": "J值中性（2.1），未进入极端区间"}, "boll": {"score": 0, "detail": "价格在BOLL轨道内运行"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}, "quarterly": {"last_close": 64272.0, "last_date": "2026-06-30", "ema": {"score": 0, "detail": "数据不足，无法计算EMA(12,52)"}, "macd": {"score": 0, "detail": "数据不足，无法计算MACD"}, "rsi": {"score": 0, "detail": "数据不足，无法计算RSI"}, "kdj": {"score": 0, "detail": "数据不足，无法计算KDJ"}, "boll": {"score": 0, "detail": "数据不足，无法计算BOLL"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}, "yearly": {"last_close": 64272.0, "last_date": "2026-12-31", "ema": {"score": 0, "detail": "数据不足，无法计算EMA(12,52)"}, "macd": {"score": 0, "detail": "数据不足，无法计算MACD"}, "rsi": {"score": 0, "detail": "数据不足，无法计算RSI"}, "kdj": {"score": 0, "detail": "数据不足，无法计算KDJ"}, "boll": {"score": 0, "detail": "数据不足，无法计算BOLL"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}}}, "ETH": {"name": "以太坊", "symbol": "ETHUSDT", "category": "加密货币", "current_price": 1738.59, "current_date": "2026-06-21", "avg_daily_volume_usd": 1453051721.03, "composite_signal": "偏多", "composite_scores": {"right_positive": 0, "right_negative": 0, "left_positive": 1, "left_negative": 0}, "analysis": {"daily": {"last_close": 1738.59, "last_date": "2026-06-21", "ema": {"score": 0, "detail": "EMA12位于EMA52下方，未发生交叉"}, "macd": {"score": 0, "detail": "MACD柱状线为正，未发生转换"}, "rsi": {"score": 0, "detail": "RSI中性（42.0），未突破阈值"}, "kdj": {"score": 0, "detail": "J值中性（37.3），未进入极端区间"}, "boll": {"score": 0, "detail": "价格在BOLL轨道内运行"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}, "weekly": {"last_close": 1738.59, "last_date": "2026-06-26", "ema": {"score": 0, "detail": "EMA12位于EMA52下方，未发生交叉"}, "macd": {"score": 0, "detail": "MACD柱状线为负，未发生转换"}, "rsi": {"score": 0, "detail": "RSI中性（35.3），未突破阈值"}, "kdj": {"score": 0, "detail": "J值中性（13.0），未进入极端区间"}, "boll": {"score": 0, "detail": "价格在BOLL轨道内运行"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}, "monthly": {"last_close": 1738.59, "last_date": "2026-06-30", "ema": {"score": 0, "detail": "数据不足，无法计算EMA(12,52)"}, "macd": {"score": 0, "detail": "数据不足，无法计算MACD"}, "rsi": {"score": 0, "detail": "RSI中性（37.5），未突破阈值"}, "kdj": {"score": 1, "detail": "J值极端超卖（-4.5）"}, "boll": {"score": 0, "detail": "价格在BOLL轨道内运行"}, "right_positive": 0, "right_negative": 0, "left_positive": 1, "left_negative": 0}, "quarterly": {"last_close": 1738.59, "last_date": "2026-06-30", "ema": {"score": 0, "detail": "数据不足，无法计算EMA(12,52)"}, "macd": {"score": 0, "detail": "数据不足，无法计算MACD"}, "rsi": {"score": 0, "detail": "数据不足，无法计算RSI"}, "kdj": {"score": 0, "detail": "数据不足，无法计算KDJ"}, "boll": {"score": 0, "detail": "数据不足，无法计算BOLL"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}, "yearly": {"last_close": 1738.59, "last_date": "2026-12-31", "ema": {"score": 0, "detail": "数据不足，无法计算EMA(12,52)"}, "macd": {"score": 0, "detail": "数据不足，无法计算MACD"}, "rsi": {"score": 0, "detail": "数据不足，无法计算RSI"}, "kdj": {"score": 0, "detail": "数据不足，无法计算KDJ"}, "boll": {"score": 0, "detail": "数据不足，无法计算BOLL"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}}}, "GOLD": {"name": "黄金(XAU)", "symbol": "XAUTUSDT", "category": "大宗商品", "current_price": 4146.29, "current_date": "2026-06-21", "avg_daily_volume_usd": 46645629.52, "composite_signal": "中性", "composite_scores": {"right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}, "analysis": {"daily": {"last_close": 4146.29, "last_date": "2026-06-21", "ema": {"score": 0, "detail": "EMA12位于EMA52下方，未发生交叉"}, "macd": {"score": 0, "detail": "MACD柱状线为负，未发生转换"}, "rsi": {"score": 0, "detail": "RSI中性（35.2），未突破阈值"}, "kdj": {"score": 0, "detail": "J值中性（3.4），未进入极端区间"}, "boll": {"score": 0, "detail": "价格在BOLL轨道内运行"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}, "weekly": {"last_close": null, "last_date": null, "ema": {"score": 0, "detail": "数据不足"}, "macd": {"score": 0, "detail": "数据不足"}, "rsi": {"score": 0, "detail": "数据不足"}, "kdj": {"score": 0, "detail": "数据不足"}, "boll": {"score": 0, "detail": "数据不足"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}, "monthly": {"last_close": null, "last_date": null, "ema": {"score": 0, "detail": "数据不足"}, "macd": {"score": 0, "detail": "数据不足"}, "rsi": {"score": 0, "detail": "数据不足"}, "kdj": {"score": 0, "detail": "数据不足"}, "boll": {"score": 0, "detail": "数据不足"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}, "quarterly": {"last_close": null, "last_date": null, "ema": {"score": 0, "detail": "数据不足"}, "macd": {"score": 0, "detail": "数据不足"}, "rsi": {"score": 0, "detail": "数据不足"}, "kdj": {"score": 0, "detail": "数据不足"}, "boll": {"score": 0, "detail": "数据不足"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}, "yearly": {"last_close": null, "last_date": null, "ema": {"score": 0, "detail": "数据不足"}, "macd": {"score": 0, "detail": "数据不足"}, "rsi": {"score": 0, "detail": "数据不足"}, "kdj": {"score": 0, "detail": "数据不足"}, "boll": {"score": 0, "detail": "数据不足"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}}}, "SPX": {"name": "标普500", "symbol": "SPY", "category": "股票指数", "current_price": 746.74, "current_date": "2026-06-18", "avg_daily_volume_usd": 46257950027.87, "composite_signal": "中性", "composite_scores": {"right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}, "analysis": {"daily": {"last_close": 746.74, "last_date": "2026-06-18", "ema": {"score": 0, "detail": "EMA12位于EMA52上方，未发生交叉"}, "macd": {"score": 0, "detail": "MACD柱状线为负，未发生转换"}, "rsi": {"score": 0, "detail": "RSI中性（55.1），未突破阈值"}, "kdj": {"score": 0, "detail": "J值中性（79.7），未进入极端区间"}, "boll": {"score": 0, "detail": "价格在BOLL轨道内运行"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}, "weekly": {"last_close": 746.74, "last_date": "2026-06-19", "ema": {"score": 0, "detail": "EMA12位于EMA52上方，未发生交叉"}, "macd": {"score": 0, "detail": "MACD柱状线为正，未发生转换"}, "rsi": {"score": 0, "detail": "RSI中性（67.2），未突破阈值"}, "kdj": {"score": 0, "detail": "J值中性（79.7），未进入极端区间"}, "boll": {"score": 0, "detail": "价格在BOLL轨道内运行"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}, "monthly": {"last_close": 746.74, "last_date": "2026-06-30", "ema": {"score": 0, "detail": "EMA12位于EMA52上方，未发生交叉"}, "macd": {"score": 0, "detail": "MACD柱状线为正，未发生转换"}, "rsi": {"score": 0, "detail": "RSI处于超买区（74.4），未跌破70"}, "kdj": {"score": 0, "detail": "J值中性（92.7），未进入极端区间"}, "boll": {"score": 0, "detail": "价格在BOLL轨道内运行"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}, "quarterly": {"last_close": 746.74, "last_date": "2026-06-30", "ema": {"score": 0, "detail": "EMA12位于EMA52上方，未发生交叉"}, "macd": {"score": 0, "detail": "MACD柱状线为正，未发生转换"}, "rsi": {"score": 0, "detail": "RSI处于超买区（79.4），未跌破70"}, "kdj": {"score": 0, "detail": "J值中性（93.5），未进入极端区间"}, "boll": {"score": 0, "detail": "价格在BOLL轨道内运行"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}, "yearly": {"last_close": 746.74, "last_date": "2026-12-31", "ema": {"score": 0, "detail": "数据不足，无法计算EMA(12,52)"}, "macd": {"score": 0, "detail": "数据不足，无法计算MACD"}, "rsi": {"score": 0, "detail": "RSI处于超买区（86.9），未跌破70"}, "kdj": {"score": 0, "detail": "J值中性（99.8），未进入极端区间"}, "boll": {"score": 0, "detail": "价格在上轨上方运行"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}}}, "OIL": {"name": "原油(WTI)", "symbol": "USO", "category": "大宗商品", "current_price": 114.87, "current_date": "2026-06-18", "avg_daily_volume_usd": 1066836099.97, "composite_signal": "中性", "composite_scores": {"right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}, "analysis": {"daily": {"last_close": 114.87, "last_date": "2026-06-18", "ema": {"score": 0, "detail": "EMA12位于EMA52下方，未发生交叉"}, "macd": {"score": 0, "detail": "MACD柱状线为负，未发生转换"}, "rsi": {"score": 0, "detail": "RSI中性（33.2），未突破阈值"}, "kdj": {"score": 0, "detail": "J值中性（4.0），未进入极端区间"}, "boll": {"score": 0, "detail": "价格在BOLL轨道内运行"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}, "weekly": {"last_close": 114.87, "last_date": "2026-06-19", "ema": {"score": 0, "detail": "EMA12位于EMA52上方，未发生交叉"}, "macd": {"score": 0, "detail": "MACD柱状线为负，未发生转换"}, "rsi": {"score": 0, "detail": "RSI中性（51.3），未突破阈值"}, "kdj": {"score": 0, "detail": "J值中性（3.0），未进入极端区间"}, "boll": {"score": 0, "detail": "价格在BOLL轨道内运行"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}, "monthly": {"last_close": 114.87, "last_date": "2026-06-30", "ema": {"score": 0, "detail": "EMA12位于EMA52上方，未发生交叉"}, "macd": {"score": 0, "detail": "MACD柱状线为正，未发生转换"}, "rsi": {"score": 0, "detail": "RSI中性（61.5），未突破阈值"}, "kdj": {"score": 0, "detail": "J值中性（68.3），未进入极端区间"}, "boll": {"score": 0, "detail": "价格在BOLL轨道内运行"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}, "quarterly": {"last_close": 114.87, "last_date": "2026-06-30", "ema": {"score": 0, "detail": "EMA12位于EMA52下方，未发生交叉"}, "macd": {"score": 0, "detail": "MACD柱状线为正，未发生转换"}, "rsi": {"score": 0, "detail": "RSI中性（58.3），未突破阈值"}, "kdj": {"score": 0, "detail": "J值中性（67.3），未进入极端区间"}, "boll": {"score": 0, "detail": "价格在上轨上方运行"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}, "yearly": {"last_close": 114.87, "last_date": "2026-12-31", "ema": {"score": 0, "detail": "数据不足，无法计算EMA(12,52)"}, "macd": {"score": 0, "detail": "数据不足，无法计算MACD"}, "rsi": {"score": 0, "detail": "RSI中性（39.7），未突破阈值"}, "kdj": {"score": 0, "detail": "J值中性（77.0），未进入极端区间"}, "boll": {"score": 0, "detail": "价格在BOLL轨道内运行"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}}}, "NDX": {"name": "纳斯达克100", "symbol": "QQQ", "category": "股票指数", "current_price": 740.62, "current_date": "2026-06-18", "avg_daily_volume_usd": 29467006306.08, "composite_signal": "偏空", "composite_scores": {"right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 2}, "analysis": {"daily": {"last_close": 740.62, "last_date": "2026-06-18", "ema": {"score": 0, "detail": "EMA12位于EMA52上方，未发生交叉"}, "macd": {"score": 0, "detail": "MACD柱状线为负，未发生转换"}, "rsi": {"score": 0, "detail": "RSI中性（59.1），未突破阈值"}, "kdj": {"score": 0, "detail": "J值中性（94.0），未进入极端区间"}, "boll": {"score": 0, "detail": "价格在BOLL轨道内运行"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}, "weekly": {"last_close": 740.62, "last_date": "2026-06-19", "ema": {"score": 0, "detail": "EMA12位于EMA52上方，未发生交叉"}, "macd": {"score": 0, "detail": "MACD柱状线为正，未发生转换"}, "rsi": {"score": 0, "detail": "RSI处于超买区（70.9），未跌破70"}, "kdj": {"score": 0, "detail": "J值中性（89.6），未进入极端区间"}, "boll": {"score": 0, "detail": "价格在BOLL轨道内运行"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}, "monthly": {"last_close": 740.62, "last_date": "2026-06-30", "ema": {"score": 0, "detail": "EMA12位于EMA52上方，未发生交叉"}, "macd": {"score": 0, "detail": "MACD柱状线为正，未发生转换"}, "rsi": {"score": 0, "detail": "RSI处于超买区（78.3），未跌破70"}, "kdj": {"score": 0, "detail": "J值中性（97.2），未进入极端区间"}, "boll": {"score": 0, "detail": "价格在上轨上方运行"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 0}, "quarterly": {"last_close": 740.62, "last_date": "2026-06-30", "ema": {"score": 0, "detail": "EMA12位于EMA52上方，未发生交叉"}, "macd": {"score": 0, "detail": "MACD柱状线为正，未发生转换"}, "rsi": {"score": 0, "detail": "RSI处于超买区（80.2），未跌破70"}, "kdj": {"score": 0, "detail": "J值中性（93.5），未进入极端区间"}, "boll": {"score": -1, "detail": "价格突破BOLL上轨（超买逃顶）"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 1}, "yearly": {"last_close": 740.62, "last_date": "2026-12-31", "ema": {"score": 0, "detail": "数据不足，无法计算EMA(12,52)"}, "macd": {"score": 0, "detail": "数据不足，无法计算MACD"}, "rsi": {"score": 0, "detail": "RSI处于超买区（86.7），未跌破70"}, "kdj": {"score": -1, "detail": "J值极端超买（101.4）"}, "boll": {"score": 0, "detail": "价格在上轨上方运行"}, "right_positive": 0, "right_negative": 0, "left_positive": 0, "left_negative": 1}}}};
+var PERIODS = ["daily", "weekly", "monthly", "quarterly", "yearly"];
+var PERIOD_CN = {"daily": "\u65e5\u7ebf", "weekly": "\u5468\u7ebf", "monthly": "\u6708\u7ebf", "quarterly": "\u5b63\u7ebf", "yearly": "\u5e74\u7ebf"};
+var INDICATORS = ["ema", "macd", "rsi", "kdj", "boll"];
+var INDICATOR_CN = {"ema": "EMA(12,52)", "macd": "MACD(12,26,9)", "rsi": "RSI(14)", "kdj": "KDJ(9,3,3)", "boll": "BOLL(20,2)"};
+var RIGHT_INDICATORS = ["ema", "macd"];
+var LEFT_INDICATORS = ["rsi", "kdj", "boll"];
+var ASSET_COLORS = ["#3b82f6", "#a855f7", "#f59e0b", "#22c55e", "#ef4444", "#06b6d4"];
+var assetKeys = ["BTC", "ETH", "GOLD", "SPX", "OIL", "NDX"];
+
+// ============================================================
+// 工具函数
+// ============================================================
+function formatVolume(v) {
+    if (v == null) return "N/A";
+    if (v >= 1e12) return "$" + (v/1e12).toFixed(2) + "T";
+    if (v >= 1e9) return "$" + (v/1e9).toFixed(2) + "B";
+    if (v >= 1e6) return "$" + (v/1e6).toFixed(2) + "M";
+    return "$" + v.toLocaleString();
+}
+function formatPrice(p) {
+    if (p == null) return "N/A";
+    if (p >= 10000) return p.toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2});
+    if (p >= 1) return p.toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:4});
+    return p.toFixed(6);
+}
+function signalColor(sig) {
+    if (sig === "偏多") return "#22c55e";
+    if (sig === "偏空") return "#ef4444";
+    if (sig === "分化") return "#f59e0b";
+    return "#8896ab";
+}
+function scoreBadge(s) {
+    if (s > 0) return '<span style="color:#22c55e;font-weight:700;">+' + s + '</span>';
+    if (s < 0) return '<span style="color:#ef4444;font-weight:700;">' + s + '</span>';
+    return '<span style="color:#8896ab;">0</span>';
+}
+
+// ============================================================
+// 渲染概览表
+// ============================================================
+(function() {
+    var tbody = document.getElementById("overview-tbody");
+    var html = "";
+    assetKeys.forEach(function(key) {
+        var d = DATA[key];
+        var cs = d.composite_scores;
+        html += '<tr>';
+        html += '<td style="font-weight:700;">' + d.name + '</td>';
+        html += '<td>' + d.category + '</td>';
+        html += '<td style="font-weight:600;">' + formatPrice(d.current_price) + '</td>';
+        html += '<td>' + d.current_date + '</td>';
+        html += '<td>' + formatVolume(d.avg_daily_volume_usd) + '</td>';
+        html += '<td>' + scoreBadge(cs.right_positive) + '</td>';
+        html += '<td>' + scoreBadge(cs.right_negative) + '</td>';
+        html += '<td>' + scoreBadge(cs.left_positive) + '</td>';
+        html += '<td>' + scoreBadge(cs.left_negative) + '</td>';
+        html += '<td><span class="signal-badge" style="background:' + signalColor(d.composite_signal) + ';">' + d.composite_signal + '</span></td>';
+        html += '</tr>';
+    });
+    tbody.innerHTML = html;
+})();
+
+// ============================================================
+// 渲染信号卡片
+// ============================================================
+(function() {
+    var container = document.getElementById("signal-cards");
+    var html = "";
+    assetKeys.forEach(function(key, i) {
+        var d = DATA[key];
+        var cs = d.composite_scores;
+        html += '<div class="signal-card">';
+        html += '<div class="asset-name">' + d.name + '</div>';
+        html += '<div class="asset-category">' + d.category + '</div>';
+        html += '<div class="signal-text" style="color:' + signalColor(d.composite_signal) + ';">' + d.composite_signal + '</div>';
+        html += '<div class="score-detail">';
+        html += '右侧 +' + cs.right_positive + ' / -' + cs.right_negative + '<br>';
+        html += '左侧 +' + cs.left_positive + ' / -' + cs.left_negative;
+        html += '</div>';
+        html += '</div>';
+    });
+    container.innerHTML = html;
+})();
+
+// ============================================================
+// 图表1: 左右侧信号分布堆叠柱状图
+// ============================================================
+(function() {
+    var chart = echarts.init(document.getElementById("chart-signal-dist"));
+    var names = assetKeys.map(function(k) { return DATA[k].name; });
+    var rightPos = assetKeys.map(function(k) { return DATA[k].composite_scores.right_positive; });
+    var rightNeg = assetKeys.map(function(k) { return -DATA[k].composite_scores.right_negative; });
+    var leftPos = assetKeys.map(function(k) { return DATA[k].composite_scores.left_positive; });
+    var leftNeg = assetKeys.map(function(k) { return -DATA[k].composite_scores.left_negative; });
+
+    var option = {
+        tooltip: { trigger: "axis" },
+        legend: {
+            data: ["右侧正分", "右侧负分", "左侧正分", "左侧负分"],
+            textStyle: { color: "#94a3b8" },
+            top: 0
+        },
+        grid: { left: 60, right: 30, top: 40, bottom: 40 },
+        xAxis: {
+            type: "category",
+            data: names,
+            axisLabel: { color: "#94a3b8", fontSize: 12 },
+            axisLine: { lineStyle: { color: "#334155" } }
+        },
+        yAxis: {
+            type: "value",
+            axisLabel: { color: "#94a3b8" },
+            splitLine: { lineStyle: { color: "#334155", type: "dashed" } }
+        },
+        series: [
+            { name: "右侧正分", type: "bar", stack: "right", data: rightPos, itemStyle: { color: "#3b82f6" }, barWidth: "30%" },
+            { name: "右侧负分", type: "bar", stack: "right", data: rightNeg, itemStyle: { color: "#3b82f6", opacity: 0.4 } },
+            { name: "左侧正分", type: "bar", stack: "left", data: leftPos, itemStyle: { color: "#f59e0b" }, barWidth: "30%" },
+            { name: "左侧负分", type: "bar", stack: "left", data: leftNeg, itemStyle: { color: "#f59e0b", opacity: 0.4 } }
+        ]
+    };
+    chart.setOption(option);
+    window.addEventListener("resize", function() { chart.resize(); });
+})();
+
+// ============================================================
+// 图表2: 各品种五周期正负分对比图
+// ============================================================
+(function() {
+    var chart = echarts.init(document.getElementById("chart-period-compare"));
+    var periods = PERIODS.map(function(p) { return PERIOD_CN[p]; });
+    var series = [];
+
+    assetKeys.forEach(function(key, idx) {
+        var d = DATA[key];
+        var posData = PERIODS.map(function(p) {
+            var a = d.analysis[p];
+            return (a.right_positive + a.left_positive) - (a.right_negative + a.left_negative);
+        });
+        series.push({
+            name: d.name,
+            type: "bar",
+            data: posData,
+            itemStyle: {
+                color: function(params) {
+                    var val = params.value;
+                    if (val > 0) return "#22c55e";
+                    if (val < 0) return "#ef4444";
+                    return "#8896ab";
+                }
+            }
+        });
+    });
+
+    var option = {
+        tooltip: { trigger: "axis" },
+        legend: {
+            data: assetKeys.map(function(k) { return DATA[k].name; }),
+            textStyle: { color: "#94a3b8" },
+            top: 0
+        },
+        grid: { left: 50, right: 30, top: 50, bottom: 40 },
+        xAxis: {
+            type: "category",
+            data: periods,
+            axisLabel: { color: "#94a3b8" },
+            axisLine: { lineStyle: { color: "#334155" } }
+        },
+        yAxis: {
+            type: "value",
+            axisLabel: { color: "#94a3b8" },
+            splitLine: { lineStyle: { color: "#334155", type: "dashed" } }
+        },
+        series: series
+    };
+    chart.setOption(option);
+    window.addEventListener("resize", function() { chart.resize(); });
+})();
+
+// ============================================================
+// 图表3: 热力图 (5指标 x 5周期 x 6品种)
+// ============================================================
+(function() {
+    var chart = echarts.init(document.getElementById("chart-heatmap"));
+
+    // 构建热力图数据: [x(周期), y(品种-指标), value]
+    var yData = [];
+    var xData = PERIODS.map(function(p) { return PERIOD_CN[p]; });
+    var heatData = [];
+
+    assetKeys.forEach(function(key) {
+        var d = DATA[key];
+        INDICATORS.forEach(function(ind) {
+            var label = d.name + " " + INDICATOR_CN[ind];
+            yData.push(label);
+            PERIODS.forEach(function(p, pi) {
+                var score = d.analysis[p][ind].score;
+                heatData.push([pi, yData.length - 1, score]);
+            });
+        });
+    });
+
+    var option = {
+        tooltip: {
+            position: "top",
+            formatter: function(params) {
+                var val = params.value;
+                var yLabel = yData[val[1]];
+                var xLabel = xData[val[0]];
+                var score = val[2];
+                var scoreText = score > 0 ? "+" + score : "" + score;
+                var scoreColor = score > 0 ? "#22c55e" : (score < 0 ? "#ef4444" : "#8896ab");
+                return yLabel + "<br/>" + xLabel + ": <span style=\"color:" + scoreColor + ";font-weight:700;\">" + scoreText + "</span>";
+            }
+        },
+        grid: { left: 140, right: 80, top: 10, bottom: 40 },
+        xAxis: {
+            type: "category",
+            data: xData,
+            axisLabel: { color: "#94a3b8" },
+            axisLine: { lineStyle: { color: "#334155" } },
+            splitArea: { show: true, areaStyle: { color: ["#0f172a", "rgba(255,255,255,0.02)"] } }
+        },
+        yAxis: {
+            type: "category",
+            data: yData,
+            axisLabel: { color: "#94a3b8", fontSize: 11 },
+            axisLine: { lineStyle: { color: "#334155" } },
+            splitArea: { show: false }
+        },
+        visualMap: {
+            min: -1, max: 1,
+            calculable: false,
+            orient: "vertical",
+            right: 10,
+            top: "center",
+            inRange: {
+                color: ["#ef4444", "#1e293b", "#22c55e"]
+            },
+            textStyle: { color: "#94a3b8" },
+            text: ["+1 看多", "-1 看空"]
+        },
+        series: [{
+            type: "heatmap",
+            data: heatData,
+            label: {
+                show: true,
+                formatter: function(p) {
+                    var v = p.value[2];
+                    return v > 0 ? "+" + v : "" + v;
+                },
+                fontSize: 11,
+                fontWeight: 700
+            },
+            itemStyle: {
+                borderColor: "#0f172a",
+                borderWidth: 2,
+                borderRadius: 3
+            }
+        }]
+    };
+    chart.setOption(option);
+    window.addEventListener("resize", function() { chart.resize(); });
+})();
+
+// ============================================================
+// 各品种详细分析卡片
+// ============================================================
+(function() {
+    var container = document.getElementById("asset-details");
+    var html = "";
+
+    assetKeys.forEach(function(key) {
+        var d = DATA[key];
+        html += '<div class="asset-detail">';
+        html += '<div class="header">';
+        html += '<div><h3>' + d.name + ' (' + d.symbol + ')</h3>';
+        html += '<span style="font-size:13px;color:#94a3b8;">' + d.category + '</span></div>';
+        html += '<div class="price-info">';
+        html += '<div class="price">' + formatPrice(d.current_price) + '</div>';
+        html += '<div>' + d.current_date + ' | ' + formatVolume(d.avg_daily_volume_usd) + '/日</div>';
+        html += '<div><span class="signal-badge" style="background:' + signalColor(d.composite_signal) + ';font-size:14px;padding:4px 16px;">' + d.composite_signal + '</span></div>';
+        html += '</div></div>';
+
+        // 各周期表格
+        PERIODS.forEach(function(p) {
+            var a = d.analysis[p];
+            if (!a || a.last_close == null) return;
+            html += '<div style="margin-top:16px;">';
+            html += '<div style="font-size:15px;font-weight:600;margin-bottom:8px;color:#3b82f6;">';
+            html += PERIOD_CN[p] + ' <span style="font-size:12px;color:#94a3b8;font-weight:400;">(' + a.last_date + ' 收盘: ' + formatPrice(a.last_close) + ')</span>';
+            html += '</div>';
+            html += '<table class="period-table"><thead><tr>';
+            html += '<th>指标</th><th>信号</th><th>说明</th>';
+            html += '<th style="color:#3b82f6;">右侧</th>';
+            html += '<th style="color:#f59e0b;">左侧</th>';
+            html += '</tr></thead><tbody>';
+
+            // 右侧指标
+            RIGHT_INDICATORS.forEach(function(ind) {
+                var info = a[ind];
+                html += '<tr class="right-section">';
+                html += '<td class="indicator-name">' + INDICATOR_CN[ind] + '</td>';
+                html += '<td>' + scoreBadge(info.score) + '</td>';
+                html += '<td class="detail-text" title="' + info.detail + '">' + info.detail + '</td>';
+                html += '<td>' + (ind === "ema" ? (a.right_positive > 0 || a.right_negative > 0 ? "R+" + a.right_positive + "/-" + a.right_negative : "") : "") + '</td>';
+                html += '<td></td>';
+                html += '</tr>';
+            });
+
+            // 左侧指标
+            LEFT_INDICATORS.forEach(function(ind) {
+                var info = a[ind];
+                html += '<tr class="left-section">';
+                html += '<td class="indicator-name">' + INDICATOR_CN[ind] + '</td>';
+                html += '<td>' + scoreBadge(info.score) + '</td>';
+                html += '<td class="detail-text" title="' + info.detail + '">' + info.detail + '</td>';
+                html += '<td></td>';
+                html += '<td>' + (ind === "rsi" ? (a.left_positive > 0 || a.left_negative > 0 ? "L+" + a.left_positive + "/-" + a.left_negative : "") : "") + '</td>';
+                html += '</tr>';
+            });
+
+            // 合计行
+            html += '<tr style="background:rgba(255,255,255,0.03);font-weight:600;">';
+            html += '<td colspan="3" style="text-align:right;">周期合计</td>';
+            html += '<td style="color:#3b82f6;">+' + a.right_positive + ' / -' + a.right_negative + '</td>';
+            html += '<td style="color:#f59e0b;">+' + a.left_positive + ' / -' + a.left_negative + '</td>';
+            html += '</tr>';
+
+            html += '</tbody></table></div>';
+        });
+
+        html += '</div>';
+    });
+
+    container.innerHTML = html;
+})();
+
+</script>
+</body>
+</html>

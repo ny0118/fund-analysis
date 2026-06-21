@@ -1,0 +1,944 @@
+{
+  "BTC": {
+    "name": "比特币",
+    "symbol": "BTCUSDT",
+    "category": "加密货币",
+    "current_price": 64272.0,
+    "current_date": "2026-06-21",
+    "avg_daily_volume_usd": 1684005971.09,
+    "composite_signal": "中性",
+    "composite_scores": {
+      "right_positive": 0,
+      "right_negative": 0,
+      "left_positive": 0,
+      "left_negative": 0
+    },
+    "analysis": {
+      "daily": {
+        "last_close": 64272.0,
+        "last_date": "2026-06-21",
+        "ema": {
+          "score": 0,
+          "detail": "EMA12位于EMA52下方，未发生交叉"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "MACD柱状线为正，未发生转换"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "RSI中性（40.5），未突破阈值"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "J值中性（30.1），未进入极端区间"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "价格在BOLL轨道内运行"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 0
+      },
+      "weekly": {
+        "last_close": 64272.0,
+        "last_date": "2026-06-26",
+        "ema": {
+          "score": 0,
+          "detail": "EMA12位于EMA52下方，未发生交叉"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "MACD柱状线为负，未发生转换"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "RSI中性（35.8），未突破阈值"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "J值中性（3.8），未进入极端区间"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "价格在BOLL轨道内运行"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 0
+      },
+      "monthly": {
+        "last_close": 64272.0,
+        "last_date": "2026-06-30",
+        "ema": {
+          "score": 0,
+          "detail": "数据不足，无法计算EMA(12,52)"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "数据不足，无法计算MACD"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "RSI中性（39.8），未突破阈值"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "J值中性（2.1），未进入极端区间"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "价格在BOLL轨道内运行"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 0
+      },
+      "quarterly": {
+        "last_close": 64272.0,
+        "last_date": "2026-06-30",
+        "ema": {
+          "score": 0,
+          "detail": "数据不足，无法计算EMA(12,52)"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "数据不足，无法计算MACD"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "数据不足，无法计算RSI"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "数据不足，无法计算KDJ"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "数据不足，无法计算BOLL"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 0
+      },
+      "yearly": {
+        "last_close": 64272.0,
+        "last_date": "2026-12-31",
+        "ema": {
+          "score": 0,
+          "detail": "数据不足，无法计算EMA(12,52)"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "数据不足，无法计算MACD"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "数据不足，无法计算RSI"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "数据不足，无法计算KDJ"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "数据不足，无法计算BOLL"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 0
+      }
+    }
+  },
+  "ETH": {
+    "name": "以太坊",
+    "symbol": "ETHUSDT",
+    "category": "加密货币",
+    "current_price": 1738.59,
+    "current_date": "2026-06-21",
+    "avg_daily_volume_usd": 1453051721.03,
+    "composite_signal": "偏多",
+    "composite_scores": {
+      "right_positive": 0,
+      "right_negative": 0,
+      "left_positive": 1,
+      "left_negative": 0
+    },
+    "analysis": {
+      "daily": {
+        "last_close": 1738.59,
+        "last_date": "2026-06-21",
+        "ema": {
+          "score": 0,
+          "detail": "EMA12位于EMA52下方，未发生交叉"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "MACD柱状线为正，未发生转换"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "RSI中性（42.0），未突破阈值"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "J值中性（37.3），未进入极端区间"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "价格在BOLL轨道内运行"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 0
+      },
+      "weekly": {
+        "last_close": 1738.59,
+        "last_date": "2026-06-26",
+        "ema": {
+          "score": 0,
+          "detail": "EMA12位于EMA52下方，未发生交叉"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "MACD柱状线为负，未发生转换"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "RSI中性（35.3），未突破阈值"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "J值中性（13.0），未进入极端区间"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "价格在BOLL轨道内运行"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 0
+      },
+      "monthly": {
+        "last_close": 1738.59,
+        "last_date": "2026-06-30",
+        "ema": {
+          "score": 0,
+          "detail": "数据不足，无法计算EMA(12,52)"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "数据不足，无法计算MACD"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "RSI中性（37.5），未突破阈值"
+        },
+        "kdj": {
+          "score": 1,
+          "detail": "J值极端超卖（-4.5）"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "价格在BOLL轨道内运行"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 1,
+        "left_negative": 0
+      },
+      "quarterly": {
+        "last_close": 1738.59,
+        "last_date": "2026-06-30",
+        "ema": {
+          "score": 0,
+          "detail": "数据不足，无法计算EMA(12,52)"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "数据不足，无法计算MACD"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "数据不足，无法计算RSI"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "数据不足，无法计算KDJ"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "数据不足，无法计算BOLL"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 0
+      },
+      "yearly": {
+        "last_close": 1738.59,
+        "last_date": "2026-12-31",
+        "ema": {
+          "score": 0,
+          "detail": "数据不足，无法计算EMA(12,52)"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "数据不足，无法计算MACD"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "数据不足，无法计算RSI"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "数据不足，无法计算KDJ"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "数据不足，无法计算BOLL"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 0
+      }
+    }
+  },
+  "GOLD": {
+    "name": "黄金(XAU)",
+    "symbol": "XAUTUSDT",
+    "category": "大宗商品",
+    "current_price": 4146.29,
+    "current_date": "2026-06-21",
+    "avg_daily_volume_usd": 46645629.52,
+    "composite_signal": "中性",
+    "composite_scores": {
+      "right_positive": 0,
+      "right_negative": 0,
+      "left_positive": 0,
+      "left_negative": 0
+    },
+    "analysis": {
+      "daily": {
+        "last_close": 4146.29,
+        "last_date": "2026-06-21",
+        "ema": {
+          "score": 0,
+          "detail": "EMA12位于EMA52下方，未发生交叉"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "MACD柱状线为负，未发生转换"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "RSI中性（35.2），未突破阈值"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "J值中性（3.4），未进入极端区间"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "价格在BOLL轨道内运行"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 0
+      },
+      "weekly": {
+        "last_close": null,
+        "last_date": null,
+        "ema": {
+          "score": 0,
+          "detail": "数据不足"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "数据不足"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "数据不足"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "数据不足"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "数据不足"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 0
+      },
+      "monthly": {
+        "last_close": null,
+        "last_date": null,
+        "ema": {
+          "score": 0,
+          "detail": "数据不足"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "数据不足"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "数据不足"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "数据不足"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "数据不足"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 0
+      },
+      "quarterly": {
+        "last_close": null,
+        "last_date": null,
+        "ema": {
+          "score": 0,
+          "detail": "数据不足"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "数据不足"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "数据不足"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "数据不足"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "数据不足"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 0
+      },
+      "yearly": {
+        "last_close": null,
+        "last_date": null,
+        "ema": {
+          "score": 0,
+          "detail": "数据不足"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "数据不足"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "数据不足"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "数据不足"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "数据不足"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 0
+      }
+    }
+  },
+  "SPX": {
+    "name": "标普500",
+    "symbol": "SPY",
+    "category": "股票指数",
+    "current_price": 746.74,
+    "current_date": "2026-06-18",
+    "avg_daily_volume_usd": 46257950027.87,
+    "composite_signal": "中性",
+    "composite_scores": {
+      "right_positive": 0,
+      "right_negative": 0,
+      "left_positive": 0,
+      "left_negative": 0
+    },
+    "analysis": {
+      "daily": {
+        "last_close": 746.74,
+        "last_date": "2026-06-18",
+        "ema": {
+          "score": 0,
+          "detail": "EMA12位于EMA52上方，未发生交叉"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "MACD柱状线为负，未发生转换"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "RSI中性（55.1），未突破阈值"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "J值中性（79.7），未进入极端区间"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "价格在BOLL轨道内运行"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 0
+      },
+      "weekly": {
+        "last_close": 746.74,
+        "last_date": "2026-06-19",
+        "ema": {
+          "score": 0,
+          "detail": "EMA12位于EMA52上方，未发生交叉"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "MACD柱状线为正，未发生转换"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "RSI中性（67.2），未突破阈值"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "J值中性（79.7），未进入极端区间"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "价格在BOLL轨道内运行"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 0
+      },
+      "monthly": {
+        "last_close": 746.74,
+        "last_date": "2026-06-30",
+        "ema": {
+          "score": 0,
+          "detail": "EMA12位于EMA52上方，未发生交叉"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "MACD柱状线为正，未发生转换"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "RSI处于超买区（74.4），未跌破70"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "J值中性（92.7），未进入极端区间"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "价格在BOLL轨道内运行"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 0
+      },
+      "quarterly": {
+        "last_close": 746.74,
+        "last_date": "2026-06-30",
+        "ema": {
+          "score": 0,
+          "detail": "EMA12位于EMA52上方，未发生交叉"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "MACD柱状线为正，未发生转换"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "RSI处于超买区（79.4），未跌破70"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "J值中性（93.5），未进入极端区间"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "价格在BOLL轨道内运行"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 0
+      },
+      "yearly": {
+        "last_close": 746.74,
+        "last_date": "2026-12-31",
+        "ema": {
+          "score": 0,
+          "detail": "数据不足，无法计算EMA(12,52)"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "数据不足，无法计算MACD"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "RSI处于超买区（86.9），未跌破70"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "J值中性（99.8），未进入极端区间"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "价格在上轨上方运行"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 0
+      }
+    }
+  },
+  "OIL": {
+    "name": "原油(WTI)",
+    "symbol": "USO",
+    "category": "大宗商品",
+    "current_price": 114.87,
+    "current_date": "2026-06-18",
+    "avg_daily_volume_usd": 1066836099.97,
+    "composite_signal": "中性",
+    "composite_scores": {
+      "right_positive": 0,
+      "right_negative": 0,
+      "left_positive": 0,
+      "left_negative": 0
+    },
+    "analysis": {
+      "daily": {
+        "last_close": 114.87,
+        "last_date": "2026-06-18",
+        "ema": {
+          "score": 0,
+          "detail": "EMA12位于EMA52下方，未发生交叉"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "MACD柱状线为负，未发生转换"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "RSI中性（33.2），未突破阈值"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "J值中性（4.0），未进入极端区间"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "价格在BOLL轨道内运行"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 0
+      },
+      "weekly": {
+        "last_close": 114.87,
+        "last_date": "2026-06-19",
+        "ema": {
+          "score": 0,
+          "detail": "EMA12位于EMA52上方，未发生交叉"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "MACD柱状线为负，未发生转换"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "RSI中性（51.3），未突破阈值"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "J值中性（3.0），未进入极端区间"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "价格在BOLL轨道内运行"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 0
+      },
+      "monthly": {
+        "last_close": 114.87,
+        "last_date": "2026-06-30",
+        "ema": {
+          "score": 0,
+          "detail": "EMA12位于EMA52上方，未发生交叉"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "MACD柱状线为正，未发生转换"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "RSI中性（61.5），未突破阈值"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "J值中性（68.3），未进入极端区间"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "价格在BOLL轨道内运行"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 0
+      },
+      "quarterly": {
+        "last_close": 114.87,
+        "last_date": "2026-06-30",
+        "ema": {
+          "score": 0,
+          "detail": "EMA12位于EMA52下方，未发生交叉"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "MACD柱状线为正，未发生转换"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "RSI中性（58.3），未突破阈值"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "J值中性（67.3），未进入极端区间"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "价格在上轨上方运行"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 0
+      },
+      "yearly": {
+        "last_close": 114.87,
+        "last_date": "2026-12-31",
+        "ema": {
+          "score": 0,
+          "detail": "数据不足，无法计算EMA(12,52)"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "数据不足，无法计算MACD"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "RSI中性（39.7），未突破阈值"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "J值中性（77.0），未进入极端区间"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "价格在BOLL轨道内运行"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 0
+      }
+    }
+  },
+  "NDX": {
+    "name": "纳斯达克100",
+    "symbol": "QQQ",
+    "category": "股票指数",
+    "current_price": 740.62,
+    "current_date": "2026-06-18",
+    "avg_daily_volume_usd": 29467006306.08,
+    "composite_signal": "偏空",
+    "composite_scores": {
+      "right_positive": 0,
+      "right_negative": 0,
+      "left_positive": 0,
+      "left_negative": 2
+    },
+    "analysis": {
+      "daily": {
+        "last_close": 740.62,
+        "last_date": "2026-06-18",
+        "ema": {
+          "score": 0,
+          "detail": "EMA12位于EMA52上方，未发生交叉"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "MACD柱状线为负，未发生转换"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "RSI中性（59.1），未突破阈值"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "J值中性（94.0），未进入极端区间"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "价格在BOLL轨道内运行"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 0
+      },
+      "weekly": {
+        "last_close": 740.62,
+        "last_date": "2026-06-19",
+        "ema": {
+          "score": 0,
+          "detail": "EMA12位于EMA52上方，未发生交叉"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "MACD柱状线为正，未发生转换"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "RSI处于超买区（70.9），未跌破70"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "J值中性（89.6），未进入极端区间"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "价格在BOLL轨道内运行"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 0
+      },
+      "monthly": {
+        "last_close": 740.62,
+        "last_date": "2026-06-30",
+        "ema": {
+          "score": 0,
+          "detail": "EMA12位于EMA52上方，未发生交叉"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "MACD柱状线为正，未发生转换"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "RSI处于超买区（78.3），未跌破70"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "J值中性（97.2），未进入极端区间"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "价格在上轨上方运行"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 0
+      },
+      "quarterly": {
+        "last_close": 740.62,
+        "last_date": "2026-06-30",
+        "ema": {
+          "score": 0,
+          "detail": "EMA12位于EMA52上方，未发生交叉"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "MACD柱状线为正，未发生转换"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "RSI处于超买区（80.2），未跌破70"
+        },
+        "kdj": {
+          "score": 0,
+          "detail": "J值中性（93.5），未进入极端区间"
+        },
+        "boll": {
+          "score": -1,
+          "detail": "价格突破BOLL上轨（超买逃顶）"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 1
+      },
+      "yearly": {
+        "last_close": 740.62,
+        "last_date": "2026-12-31",
+        "ema": {
+          "score": 0,
+          "detail": "数据不足，无法计算EMA(12,52)"
+        },
+        "macd": {
+          "score": 0,
+          "detail": "数据不足，无法计算MACD"
+        },
+        "rsi": {
+          "score": 0,
+          "detail": "RSI处于超买区（86.7），未跌破70"
+        },
+        "kdj": {
+          "score": -1,
+          "detail": "J值极端超买（101.4）"
+        },
+        "boll": {
+          "score": 0,
+          "detail": "价格在上轨上方运行"
+        },
+        "right_positive": 0,
+        "right_negative": 0,
+        "left_positive": 0,
+        "left_negative": 1
+      }
+    }
+  }
+}

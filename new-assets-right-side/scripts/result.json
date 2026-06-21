@@ -1,0 +1,2786 @@
+{
+  "generated_at": "2026-06-21 01:06:55",
+  "total_assets": 66,
+  "category_order": [
+    "外汇",
+    "债券/利率",
+    "大宗商品",
+    "股票指数",
+    "货币",
+    "加密货币"
+  ],
+  "assets": [
+    {
+      "symbol": "FXY",
+      "name": "美元/日元",
+      "current_price": 56.85,
+      "avg_daily_volume_usd": 9864339.12,
+      "positive_score": 1,
+      "negative_score": 0,
+      "composite_signal": "偏多",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 1,
+          "score": "+1"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "外汇"
+    },
+    {
+      "symbol": "FXB",
+      "name": "英镑/美元",
+      "current_price": 126.93,
+      "avg_daily_volume_usd": 4593726.52,
+      "positive_score": 1,
+      "negative_score": 0,
+      "composite_signal": "偏多",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 1,
+          "score": "+1"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "外汇"
+    },
+    {
+      "symbol": "FXA",
+      "name": "澳元/美元",
+      "current_price": 69.45,
+      "avg_daily_volume_usd": 812299.89,
+      "positive_score": 1,
+      "negative_score": 0,
+      "composite_signal": "偏多",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 1,
+          "score": "+1"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "外汇"
+    },
+    {
+      "symbol": "FXF",
+      "name": "美元/瑞典克朗",
+      "current_price": 109.56,
+      "avg_daily_volume_usd": 6145149.09,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "外汇"
+    },
+    {
+      "symbol": "FXE",
+      "name": "欧元/美元",
+      "current_price": 105.77,
+      "avg_daily_volume_usd": 23748836.37,
+      "positive_score": 0,
+      "negative_score": 1,
+      "composite_signal": "偏空",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": -1,
+          "score": "-1"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "外汇"
+    },
+    {
+      "symbol": "FXC",
+      "name": "加元/美元",
+      "current_price": 69.1451,
+      "avg_daily_volume_usd": 788665.21,
+      "positive_score": 0,
+      "negative_score": 2,
+      "composite_signal": "偏空",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": -1,
+          "macd_signal": 0,
+          "score": "-1"
+        },
+        {
+          "period": "月线",
+          "ema_signal": -1,
+          "macd_signal": 0,
+          "score": "-1"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "外汇"
+    },
+    {
+      "symbol": "LQD",
+      "name": "投资级企业债",
+      "current_price": 109.07,
+      "avg_daily_volume_usd": 2838668237.85,
+      "positive_score": 1,
+      "negative_score": 0,
+      "composite_signal": "偏多",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 1,
+          "score": "+1"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "债券/利率"
+    },
+    {
+      "symbol": "EMB",
+      "name": "新兴市场美元债",
+      "current_price": 96.73,
+      "avg_daily_volume_usd": 617174563.52,
+      "positive_score": 1,
+      "negative_score": 0,
+      "composite_signal": "偏多",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 1,
+          "score": "+1"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "债券/利率"
+    },
+    {
+      "symbol": "IEF",
+      "name": "7-10年美国国债",
+      "current_price": 94.36,
+      "avg_daily_volume_usd": 704410131.37,
+      "positive_score": 1,
+      "negative_score": 2,
+      "composite_signal": "分化",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": -1,
+          "score": "-1"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": -1,
+          "score": "-1"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 1,
+          "score": "+1"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "债券/利率"
+    },
+    {
+      "symbol": "HYG",
+      "name": "高收益企业债",
+      "current_price": 80.01,
+      "avg_daily_volume_usd": 2814111448.18,
+      "positive_score": 1,
+      "negative_score": 1,
+      "composite_signal": "分化",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": -1,
+          "score": "-1"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 1,
+          "score": "+1"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "债券/利率"
+    },
+    {
+      "symbol": "TLT",
+      "name": "20+年美国国债",
+      "current_price": 86.75,
+      "avg_daily_volume_usd": 2273615835.12,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "债券/利率"
+    },
+    {
+      "symbol": "SHY",
+      "name": "1-3年美国国债",
+      "current_price": 81.99,
+      "avg_daily_volume_usd": 270405607.7,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "债券/利率"
+    },
+    {
+      "symbol": "AGG",
+      "name": "美国综合债券",
+      "current_price": 98.9,
+      "avg_daily_volume_usd": 793149145.89,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "债券/利率"
+    },
+    {
+      "symbol": "DBA",
+      "name": "农产品综合",
+      "current_price": 26.63,
+      "avg_daily_volume_usd": 38001898.22,
+      "positive_score": 1,
+      "negative_score": 0,
+      "composite_signal": "偏多",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 1,
+          "score": "+1"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "大宗商品"
+    },
+    {
+      "symbol": "CPER",
+      "name": "铜",
+      "current_price": 38.86,
+      "avg_daily_volume_usd": 32029806.4,
+      "positive_score": 1,
+      "negative_score": 0,
+      "composite_signal": "偏多",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 1,
+          "score": "+1"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "大宗商品"
+    },
+    {
+      "symbol": "SIL",
+      "name": "银矿股",
+      "current_price": 83.73,
+      "avg_daily_volume_usd": 151670554.42,
+      "positive_score": 1,
+      "negative_score": 0,
+      "composite_signal": "偏多",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 1,
+          "score": "+1"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "大宗商品"
+    },
+    {
+      "symbol": "SLV",
+      "name": "白银",
+      "current_price": 59.51,
+      "avg_daily_volume_usd": 1620509099.87,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "大宗商品"
+    },
+    {
+      "symbol": "DBB",
+      "name": "基础金属综合",
+      "current_price": 25.3,
+      "avg_daily_volume_usd": 11161879.75,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "大宗商品"
+    },
+    {
+      "symbol": "DBE",
+      "name": "能源综合",
+      "current_price": 27.473,
+      "avg_daily_volume_usd": 1794525.17,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "大宗商品"
+    },
+    {
+      "symbol": "JJC",
+      "name": "铜期货",
+      "current_price": 19.56,
+      "avg_daily_volume_usd": 812378.73,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "大宗商品"
+    },
+    {
+      "symbol": "URA",
+      "name": "铀/核能",
+      "current_price": 47.78,
+      "avg_daily_volume_usd": 213218179.76,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "大宗商品"
+    },
+    {
+      "symbol": "GDX",
+      "name": "金矿股",
+      "current_price": 82.51,
+      "avg_daily_volume_usd": 2084989211.47,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "大宗商品"
+    },
+    {
+      "symbol": "XOP",
+      "name": "油气勘探",
+      "current_price": 153.36,
+      "avg_daily_volume_usd": 655427685.62,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "大宗商品"
+    },
+    {
+      "symbol": "PALL",
+      "name": "钯金",
+      "current_price": 23.23,
+      "avg_daily_volume_usd": 17308041.65,
+      "positive_score": 0,
+      "negative_score": 1,
+      "composite_signal": "偏空",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": -1,
+          "macd_signal": 0,
+          "score": "-1"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "大宗商品"
+    },
+    {
+      "symbol": "LIT",
+      "name": "锂",
+      "current_price": 82.15,
+      "avg_daily_volume_usd": 49774256.86,
+      "positive_score": 0,
+      "negative_score": 1,
+      "composite_signal": "偏空",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": -1,
+          "score": "-1"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "大宗商品"
+    },
+    {
+      "symbol": "REMX",
+      "name": "稀土",
+      "current_price": 95.55,
+      "avg_daily_volume_usd": 112663979.38,
+      "positive_score": 0,
+      "negative_score": 1,
+      "composite_signal": "偏空",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": -1,
+          "score": "-1"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "大宗商品"
+    },
+    {
+      "symbol": "COPX",
+      "name": "铜矿股",
+      "current_price": 85.48,
+      "avg_daily_volume_usd": 373987737.71,
+      "positive_score": 0,
+      "negative_score": 1,
+      "composite_signal": "偏空",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": -1,
+          "score": "-1"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "大宗商品"
+    },
+    {
+      "symbol": "OIH",
+      "name": "油气服务",
+      "current_price": 385.49,
+      "avg_daily_volume_usd": 162032694.86,
+      "positive_score": 0,
+      "negative_score": 1,
+      "composite_signal": "偏空",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": -1,
+          "score": "-1"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "大宗商品"
+    },
+    {
+      "symbol": "EFA",
+      "name": "发达市场",
+      "current_price": 104.41,
+      "avg_daily_volume_usd": 1507940494.93,
+      "positive_score": 1,
+      "negative_score": 0,
+      "composite_signal": "偏多",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 1,
+          "score": "+1"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "股票指数"
+    },
+    {
+      "symbol": "EEM",
+      "name": "新兴市场",
+      "current_price": 70.79,
+      "avg_daily_volume_usd": 2185487405.48,
+      "positive_score": 2,
+      "negative_score": 0,
+      "composite_signal": "偏多",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 1,
+          "score": "+1"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 1,
+          "score": "+1"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "股票指数"
+    },
+    {
+      "symbol": "VGK",
+      "name": "欧洲",
+      "current_price": 88.27,
+      "avg_daily_volume_usd": 264281915.03,
+      "positive_score": 1,
+      "negative_score": 0,
+      "composite_signal": "偏多",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 1,
+          "score": "+1"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "股票指数"
+    },
+    {
+      "symbol": "EWJ",
+      "name": "日本",
+      "current_price": 96.26,
+      "avg_daily_volume_usd": 564870049.45,
+      "positive_score": 1,
+      "negative_score": 0,
+      "composite_signal": "偏多",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 1,
+          "score": "+1"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "股票指数"
+    },
+    {
+      "symbol": "FXI",
+      "name": "中国",
+      "current_price": 33.3,
+      "avg_daily_volume_usd": 1103665864.5,
+      "positive_score": 1,
+      "negative_score": 0,
+      "composite_signal": "偏多",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 1,
+          "score": "+1"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "股票指数"
+    },
+    {
+      "symbol": "INDA",
+      "name": "印度",
+      "current_price": 49.58,
+      "avg_daily_volume_usd": 338358085.23,
+      "positive_score": 1,
+      "negative_score": 0,
+      "composite_signal": "偏多",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 1,
+          "score": "+1"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "股票指数"
+    },
+    {
+      "symbol": "XLF",
+      "name": "金融",
+      "current_price": 53.57,
+      "avg_daily_volume_usd": 1961612053.48,
+      "positive_score": 1,
+      "negative_score": 0,
+      "composite_signal": "偏多",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 1,
+          "score": "+1"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "股票指数"
+    },
+    {
+      "symbol": "IBB",
+      "name": "生物科技",
+      "current_price": 173.64,
+      "avg_daily_volume_usd": 246552463.71,
+      "positive_score": 1,
+      "negative_score": 0,
+      "composite_signal": "偏多",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 1,
+          "score": "+1"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "股票指数"
+    },
+    {
+      "symbol": "XBI",
+      "name": "生物科技小盘",
+      "current_price": 140.72,
+      "avg_daily_volume_usd": 1156841928.15,
+      "positive_score": 1,
+      "negative_score": 0,
+      "composite_signal": "偏多",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 1,
+          "score": "+1"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "股票指数"
+    },
+    {
+      "symbol": "XHB",
+      "name": "住宅建筑",
+      "current_price": 111.04,
+      "avg_daily_volume_usd": 287946414.59,
+      "positive_score": 1,
+      "negative_score": 0,
+      "composite_signal": "偏多",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 1,
+          "score": "+1"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "股票指数"
+    },
+    {
+      "symbol": "XLE",
+      "name": "能源",
+      "current_price": 53.77,
+      "avg_daily_volume_usd": 2198977144.85,
+      "positive_score": 1,
+      "negative_score": 1,
+      "composite_signal": "分化",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 1,
+          "score": "+1"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": -1,
+          "score": "-1"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "股票指数"
+    },
+    {
+      "symbol": "EWZ",
+      "name": "巴西",
+      "current_price": 33.73,
+      "avg_daily_volume_usd": 1035856978.38,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "股票指数"
+    },
+    {
+      "symbol": "XLK",
+      "name": "科技",
+      "current_price": 191.44,
+      "avg_daily_volume_usd": 2634818550.81,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "股票指数"
+    },
+    {
+      "symbol": "XLP",
+      "name": "必需消费",
+      "current_price": 83.3,
+      "avg_daily_volume_usd": 1032960432.34,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "股票指数"
+    },
+    {
+      "symbol": "XLU",
+      "name": "公用事业",
+      "current_price": 44.76,
+      "avg_daily_volume_usd": 961875560.74,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "股票指数"
+    },
+    {
+      "symbol": "XLB",
+      "name": "原材料",
+      "current_price": 51.81,
+      "avg_daily_volume_usd": 619482158.13,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "股票指数"
+    },
+    {
+      "symbol": "SMH",
+      "name": "半导体",
+      "current_price": 659.88,
+      "avg_daily_volume_usd": 6605836818.36,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "股票指数"
+    },
+    {
+      "symbol": "KRE",
+      "name": "地区银行",
+      "current_price": 71.72,
+      "avg_daily_volume_usd": 1108164035.73,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "股票指数"
+    },
+    {
+      "symbol": "XRT",
+      "name": "零售",
+      "current_price": 86.39,
+      "avg_daily_volume_usd": 517656485.02,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "股票指数"
+    },
+    {
+      "symbol": "IWM",
+      "name": "罗素2000",
+      "current_price": 295.59,
+      "avg_daily_volume_usd": 8106245694.93,
+      "positive_score": 0,
+      "negative_score": 1,
+      "composite_signal": "偏空",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": -1,
+          "score": "-1"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "股票指数"
+    },
+    {
+      "symbol": "XLI",
+      "name": "工业",
+      "current_price": 180.91,
+      "avg_daily_volume_usd": 1423798838.28,
+      "positive_score": 0,
+      "negative_score": 1,
+      "composite_signal": "偏空",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": -1,
+          "score": "-1"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "股票指数"
+    },
+    {
+      "symbol": "XLV",
+      "name": "医疗",
+      "current_price": 149.4,
+      "avg_daily_volume_usd": 1598990717.72,
+      "positive_score": 0,
+      "negative_score": 1,
+      "composite_signal": "偏空",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": -1,
+          "score": "-1"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "股票指数"
+    },
+    {
+      "symbol": "VNQ",
+      "name": "房地产",
+      "current_price": 95.56,
+      "avg_daily_volume_usd": 295384051.26,
+      "positive_score": 0,
+      "negative_score": 1,
+      "composite_signal": "偏空",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": -1,
+          "score": "-1"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "股票指数"
+    },
+    {
+      "symbol": "UUP",
+      "name": "美元指数",
+      "current_price": 28.3,
+      "avg_daily_volume_usd": 61170452.55,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "货币"
+    },
+    {
+      "symbol": "BNB",
+      "name": "BNB",
+      "current_price": 587.13,
+      "avg_daily_volume_usd": 124748584.48,
+      "positive_score": 1,
+      "negative_score": 0,
+      "composite_signal": "偏多",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 1,
+          "score": "+1"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "加密货币"
+    },
+    {
+      "symbol": "OKB",
+      "name": "OKB",
+      "current_price": 75.41,
+      "avg_daily_volume_usd": 11982.46,
+      "positive_score": 1,
+      "negative_score": 0,
+      "composite_signal": "偏多",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 1,
+          "score": "+1"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "加密货币"
+    },
+    {
+      "symbol": "HYPE",
+      "name": "HYPE",
+      "current_price": 70.641,
+      "avg_daily_volume_usd": 701350.07,
+      "positive_score": 1,
+      "negative_score": 0,
+      "composite_signal": "偏多",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 1,
+          "score": "+1"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "加密货币"
+    },
+    {
+      "symbol": "SOL",
+      "name": "SOL",
+      "current_price": 73.15,
+      "avg_daily_volume_usd": 188078170.53,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "加密货币"
+    },
+    {
+      "symbol": "XRP",
+      "name": "XRP",
+      "current_price": 1.148,
+      "avg_daily_volume_usd": 122046869.82,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "加密货币"
+    },
+    {
+      "symbol": "ADA",
+      "name": "ADA",
+      "current_price": 0.1631,
+      "avg_daily_volume_usd": 31516852.3,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "加密货币"
+    },
+    {
+      "symbol": "DOT",
+      "name": "DOT",
+      "current_price": 0.972,
+      "avg_daily_volume_usd": 7758122.17,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "加密货币"
+    },
+    {
+      "symbol": "LINK",
+      "name": "LINK",
+      "current_price": 7.964,
+      "avg_daily_volume_usd": 20573355.89,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "加密货币"
+    },
+    {
+      "symbol": "AVAX",
+      "name": "AVAX",
+      "current_price": 6.265,
+      "avg_daily_volume_usd": 19689203.53,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "加密货币"
+    },
+    {
+      "symbol": "DOGE",
+      "name": "DOGE",
+      "current_price": 0.08357,
+      "avg_daily_volume_usd": 60666050.92,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "加密货币"
+    },
+    {
+      "symbol": "LTC",
+      "name": "LTC",
+      "current_price": 44.53,
+      "avg_daily_volume_usd": 14291574.01,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "加密货币"
+    },
+    {
+      "symbol": "TRX",
+      "name": "TRX",
+      "current_price": 0.3267,
+      "avg_daily_volume_usd": 43601446.22,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "加密货币"
+    },
+    {
+      "symbol": "GT",
+      "name": "GT",
+      "current_price": 6.71,
+      "avg_daily_volume_usd": 83863.69,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "加密货币"
+    },
+    {
+      "symbol": "MNT",
+      "name": "MNT",
+      "current_price": 0.5364,
+      "avg_daily_volume_usd": 437271.28,
+      "positive_score": 0,
+      "negative_score": 0,
+      "composite_signal": "中性",
+      "details": [
+        {
+          "period": "日线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "周线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "月线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "季线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        },
+        {
+          "period": "年线",
+          "ema_signal": 0,
+          "macd_signal": 0,
+          "score": "0"
+        }
+      ],
+      "category": "加密货币"
+    }
+  ]
+}

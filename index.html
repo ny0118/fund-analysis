@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>基金技术分析系统</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', sans-serif;
+  background: #0a0f1a;
+  color: #e8ecf4;
+  line-height: 1.75;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 3rem;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.15);
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+h1 span { color: #3b82f6; }
+
+.subtitle {
+  font-size: 1.05rem;
+  color: #8896ab;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: #111827;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: left;
+  transition: transform 0.2s, border-color 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #3b82f6;
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-icon.analysis { background: rgba(59, 130, 246, 0.15); }
+.card-icon.methodology { background: rgba(34, 197, 94, 0.15); }
+.card-icon.rightside { background: rgba(245, 158, 11, 0.15); }
+
+.card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #e8ecf4;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #8896ab;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.card-meta {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.card-meta span {
+  font-size: 0.75rem;
+  color: #8896ab;
+  background: #0a0f1a;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid #1e293b;
+}
+
+.arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+footer {
+  color: #8896ab;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 1.8rem; }
+  .cards { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="tag">Technical Analysis System</div>
+    <h1>基金<span>技术分析</span>系统</h1>
+    <p class="subtitle">多周期多品种技术分析工具集，覆盖右侧趋势跟踪与左侧逆势操作</p>
+  </header>
+
+  <div class="cards">
+    <a href="./multi-asset-technical-analysis/multi-asset-technical-analysis.html" class="card">
+      <div class="card-icon analysis">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 6 11 18 8 12 2 12"></polyline></svg>
+      </div>
+      <h3>核心品种分析</h3>
+      <p>6个核心品种（BTC、ETH、黄金、标普500、原油、纳斯达克100）的完整多周期技术分析，包含左右侧交易指标。</p>
+      <div class="card-meta">
+        <span>6个品种</span>
+        <span>5个指标</span>
+        <span>5个周期</span>
+      </div>
+      <div class="arrow">查看报告 →</div>
+    </a>
+
+    <a href="./new-assets-right-side/new-assets-right-side.html" class="card">
+      <div class="card-icon rightside">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+      </div>
+      <h3>多品类右侧交易</h3>
+      <p>66个品种（外汇、债券、大宗商品、股指、货币、加密货币）的右侧趋势跟踪分析，仅使用EMA+MACD指标。</p>
+      <div class="card-meta">
+        <span>66个品种</span>
+        <span>2个指标</span>
+        <span>5个周期</span>
+      </div>
+      <div class="arrow">查看报告 →</div>
+    </a>
+
+    <a href="./fund-technical-analysis/fund-technical-analysis.html" class="card">
+      <div class="card-icon methodology">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+      </div>
+      <h3>方法论文档</h3>
+      <p>完整的技术分析方法论说明，涵盖五大指标详解、五个时间维度分析框架、左侧/右侧交易分类、操作流程与信号矩阵。</p>
+      <div class="card-meta">
+        <span>5个指标</span>
+        <span>5个周期</span>
+        <span>评分规则</span>
+      </div>
+      <div class="arrow">查看文档 →</div>
+    </a>
+  </div>
+
+  <footer>
+    <p>数据来源：Binance API | Gate.io API | akshare | 每日自动更新</p>
+  </footer>
+</div>
+
+</body>
+</html>
