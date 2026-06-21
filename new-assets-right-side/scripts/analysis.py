@@ -100,8 +100,8 @@ CATEGORIES = {
         {"symbol": "TRX", "name": "TRX", "source": "binance", "pair": "TRXUSDT"},
         {"symbol": "OKB", "name": "OKB", "source": "gateio", "pair": "OKB_USDT"},
         {"symbol": "GT", "name": "GT", "source": "gateio", "pair": "GT_USDT"},
-        {"symbol": "HYPE", "name": "HYPE", "source": "gateio", "pair": "HYPE_USDT"},
-        {"symbol": "MNT", "name": "MNT", "source": "gateio", "pair": "MNT_USDT"},
+        {"symbol": "HYPE", "name": "HYPE", "source": "hyperliquid", "hl_symbol": "HYPE"},
+        {"symbol": "MNT", "name": "MNT", "source": "hyperliquid", "hl_symbol": "MNT"},
     ],
 }
 
@@ -219,6 +219,165 @@ def get_akshare_data(ticker, period='daily'):
     except Exception as e:
         print(f"  [ERROR] akshare {ticker} 获取失败: {e}")
         return None
+
+
+def get_hyperliquid_meta():
+    """获取Hyperliquid所有合约元数据和当前价格"""
+    url = "https://api.hyperliquid.xyz/info"
+    try:
+        resp = requests.post(url, json={"type": "metaAndAssetCtxs"}, timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+        # data[0] = meta, data[1] = assetCtxs
+        if not data or len(data) < 2:
+            return None, None
+        return data[0], data[1]
+    except Exception as e:
+        print(f"  [ERROR] Hyperliquid meta 获取失败: {e}")
+        return None, None
+
+
+def get_hyperliquid_candles(coin, interval="1d", start_time=None, end_time=None):
+    """获取Hyperliquid K线数据"""
+    url = "https://api.hyperliquid.xyz/info"
+    if end_time is None:
+        end_time = int(datetime.now().timestamp() * 1000)
+    if start_time is None:
+        # 默认获取约2年数据
+        start_time = end_time - 2 * 365 * 24 * 60 * 60 * 1000
+
+    payload = {
+        "type": "candleSnapshot",
+        "req": {
+            "coin": coin,
+            "interval": interval,
+            "startTime": start_time,
+            "endTime": end_time
+        }
+    }
+    try:
+        resp = requests.post(url, json=payload, timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+        if not data:
+            return None
+        # 返回格式: [{'t': timestamp, 'o': open, 'c': close, 'h': high, 'l': low, 'v': volume, 'n': trades}, ...]
+        if isinstance(data[0], dict):
+            rows = []
+            for item in data:
+                rows.append({
+                    'timestamp': int(item['t']),
+                    'open': float(item['o']),
+                    'high': float(item['h']),
+                    'low': float(item['l']),
+                    'close': float(item['c']),
+                    'volume': float(item['v']),
+                })
+            df = pd.DataFrame(rows)
+        else:
+            df = pd.DataFrame(data, columns=['timestamp', 'open', 'high', 'low', 'close', 'volume'])
+        df['date'] = pd.to_datetime(df['timestamp'], unit='ms')
+        for col in ['open', 'high', 'low', 'close', 'volume']:
+            df[col] = pd.to_numeric(df[col], errors='coerce')
+        # Hyperliquid volume是币的数量，名义成交额估算
+        avg_price = (df['high'] + df['low']) / 2
+        df['quote_volume'] = df['volume'] * avg_price
+        df = df.sort_values('date').reset_index(drop=True)
+        return df
+    except Exception as e:
+        print(f"  [ERROR] Hyperliquid {coin} K线获取失败: {e}")
+        return None
+
+
+def get_hyperliquid_data(asset_info):
+    """获取Hyperliquid品种数据，返回DataFrame"""
+    hl_symbol = asset_info['hl_symbol']
+    price_scale = asset_info.get('price_scale', 2)
+
+    # 先获取K线数据
+    df = get_hyperliquid_candles(hl_symbol, "1d")
+
+    if df is not None and len(df) >= 60:
+        # 数据充足，直接返回
+        return df
+
+    # K线数据不足，尝试用metaAndAssetCtxs补充
+    meta, asset_ctxs = get_hyperliquid_meta()
+    if asset_ctxs is None:
+        print(f"  [WARN] Hyperliquid {hl_symbol} 无法获取任何数据")
+        return df  # 可能返回None或数据不足的df
+
+    # 找到对应品种的索引
+    if meta is None or 'universe' not in meta:
+        return df
+
+    idx = None
+    for i, asset in enumerate(meta['universe']):
+        if asset.get('name') == hl_symbol:
+            idx = i
+            break
+
+    if idx is None or idx >= len(asset_ctxs):
+        print(f"  [WARN] Hyperliquid {hl_symbol} 在合约列表中未找到")
+        return df
+
+    ctx = asset_ctxs[idx]
+    mark_px = float(ctx.get('markPx', 0))
+    prev_day_px = float(ctx.get('prevDayPx', 0))
+    day_ntl_vlm = float(ctx.get('dayNtlVlm', 0))
+    open_interest = float(ctx.get('openInterest', 0))
+    funding = float(ctx.get('funding', 0))
+
+    if mark_px <= 0:
+        return df
+
+    now = datetime.now()
+    today = now.replace(hour=0, minute=0, second=0, microsecond=0)
+    yesterday = today - timedelta(days=1)
+
+    if df is not None and len(df) > 0:
+        # 把当前价格作为最新数据点追加
+        last_date = df['date'].iloc[-1]
+        if last_date < today:
+            new_row = pd.DataFrame([{
+                'timestamp': int(today.timestamp() * 1000),
+                'open': prev_day_px if prev_day_px > 0 else mark_px,
+                'high': max(mark_px, prev_day_px) if prev_day_px > 0 else mark_px,
+                'low': min(mark_px, prev_day_px) if prev_day_px > 0 else mark_px,
+                'close': mark_px,
+                'volume': day_ntl_vlm / mark_px if mark_px > 0 else 0,
+                'quote_volume': day_ntl_vlm,
+                'date': today
+            }])
+            df = pd.concat([df, new_row], ignore_index=True)
+    else:
+        # 完全没有K线数据，用meta数据构造至少两个点
+        rows = []
+        if prev_day_px > 0:
+            rows.append({
+                'timestamp': int(yesterday.timestamp() * 1000),
+                'open': prev_day_px,
+                'high': prev_day_px,
+                'low': prev_day_px,
+                'close': prev_day_px,
+                'volume': day_ntl_vlm / prev_day_px if prev_day_px > 0 else 0,
+                'quote_volume': day_ntl_vlm,
+                'date': yesterday
+            })
+        rows.append({
+            'timestamp': int(today.timestamp() * 1000),
+            'open': prev_day_px if prev_day_px > 0 else mark_px,
+            'high': max(mark_px, prev_day_px) if prev_day_px > 0 else mark_px,
+            'low': min(mark_px, prev_day_px) if prev_day_px > 0 else mark_px,
+            'close': mark_px,
+            'volume': day_ntl_vlm / mark_px if mark_px > 0 else 0,
+            'quote_volume': day_ntl_vlm,
+            'date': today
+        })
+        df = pd.DataFrame(rows)
+
+    df = df.sort_values('date').reset_index(drop=True)
+    return df
 
 
 # ============================================================
@@ -405,10 +564,14 @@ def analyze_asset(asset_info):
         df_daily = get_gateio_klines(asset_info['pair'], '1d', 1000)
     elif source == 'akshare':
         df_daily = get_akshare_data(asset_info['ticker'])
+    elif source == 'hyperliquid':
+        df_daily = get_hyperliquid_data(asset_info)
 
-    if df_daily is None or len(df_daily) < 60:
+    if df_daily is None or len(df_daily) < 2:
         print(f"    [SKIP] {symbol} 数据不足")
         return None
+
+    data_limited = len(df_daily) < 60
 
     # 检查价格是否有效（跳过价格为0的品种如FXS）
     if (df_daily['close'] == 0).any():
@@ -441,7 +604,8 @@ def analyze_asset(asset_info):
 
     for period in periods:
         df_period = resample_ohlcv(df_daily, period)
-        if df_period is None or len(df_period) < 60:
+        min_required = 10 if data_limited else 60
+        if df_period is None or len(df_period) < min_required:
             period_details.append({
                 "period": period_names[period],
                 "ema_signal": 0,
@@ -488,6 +652,8 @@ def analyze_asset(asset_info):
         "composite_signal": composite_signal,
         "details": period_details
     }
+    if data_limited:
+        result["data_limited"] = True
 
     print(f"    {composite_signal} (正:{total_positive} 负:{total_negative}) 价格:{current_price}")
     return result
@@ -514,7 +680,11 @@ def main():
             try:
                 result = analyze_asset(asset_info)
                 if result is not None:
-                    result["category"] = category
+                    # Hyperliquid品种使用asset_info中定义的category
+                    if asset_info.get('category'):
+                        result["category"] = asset_info['category']
+                    else:
+                        result["category"] = category
                     category_results.append(result)
             except Exception as e:
                 print(f"    [ERROR] {asset_info['symbol']} 分析异常: {e}")
@@ -522,7 +692,8 @@ def main():
                 traceback.print_exc()
 
             # 延迟避免限流
-            time.sleep(0.3)
+            delay = 1.0 if asset_info.get('source') == 'hyperliquid' else 0.3
+            time.sleep(delay)
 
         # 品类内按综合信号排序
         category_results.sort(key=lambda x: get_signal_sort_order(x['composite_signal']))

@@ -352,7 +352,761 @@
         <div class="header">
             <h1>多品类右侧交易技术分析报告</h1>
             <div class="subtitle">EMA(12,52) + MACD(12,26,9) | 日线/周线/月线/季线/年线</div>
-            <div class="date-info">报告生成时间：<span id="report-date">2026-06-21 01:06:55</span> | 分析品种：<span id="total-count">66</span>个</div>
+            <div class="date-info">报告生成时间：<span id="report-date">2026-06-21 13:50:52</span> | 分析品种：<span id="total-count">66</span>个</div>
+        </div>
+
+        <!-- 品类筛选按钮 -->
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">全部</button><button class="filter-btn" data-filter="外汇">外汇 (6)</button><button class="filter-btn" data-filter="债券/利率">债券/利率 (7)</button><button class="filter-btn" data-filter="大宗商品">大宗商品 (15)</button><button class="filter-btn" data-filter="股票指数">股票指数 (23)</button><button class="filter-btn" data-filter="货币">货币 (1)</button><button class="filter-btn" data-filter="加密货币">加密货币 (14)</button>
+        </div>
+
+        <!-- 综合概览表 -->
+        <div class="overview-section">
+            <h2>综合概览表</h2>
+            <table class="overview-table">
+                <thead>
+                    <tr>
+                        <th>品类</th>
+                        <th>代码</th>
+                        <th>名称</th>
+                        <th>当前价格</th>
+                        <th>日均交易额</th>
+                        <th>正分</th>
+                        <th>负分</th>
+                        <th>综合信号</th>
+                        <th>可交易场所</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+        <tr>
+            <td>外汇</td>
+            <td><strong>FXY</strong></td>
+            <td>美元/日元</td>
+            <td>56.8500</td>
+            <td>$986.43万</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>外汇</td>
+            <td><strong>FXB</strong></td>
+            <td>英镑/美元</td>
+            <td>126.9300</td>
+            <td>$459.37万</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>外汇</td>
+            <td><strong>FXA</strong></td>
+            <td>澳元/美元</td>
+            <td>69.4500</td>
+            <td>$81.23万</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>外汇</td>
+            <td><strong>FXF</strong></td>
+            <td>美元/瑞典克朗</td>
+            <td>109.5600</td>
+            <td>$614.51万</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>外汇</td>
+            <td><strong>FXE</strong></td>
+            <td>欧元/美元</td>
+            <td>105.7700</td>
+            <td>$2374.88万</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#fb7185;background:rgba(251,113,133,0.15);border:1px solid #fb7185">偏空</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>外汇</td>
+            <td><strong>FXC</strong></td>
+            <td>加元/美元</td>
+            <td>69.1451</td>
+            <td>$78.87万</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">2</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#fb7185;background:rgba(251,113,133,0.15);border:1px solid #fb7185">偏空</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>债券/利率</td>
+            <td><strong>LQD</strong></td>
+            <td>投资级企业债</td>
+            <td>109.0700</td>
+            <td>$28.39亿</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>债券/利率</td>
+            <td><strong>EMB</strong></td>
+            <td>新兴市场美元债</td>
+            <td>96.7300</td>
+            <td>$6.17亿</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>债券/利率</td>
+            <td><strong>IEF</strong></td>
+            <td>7-10年美国国债</td>
+            <td>94.3600</td>
+            <td>$7.04亿</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">2</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#fbbf24;background:rgba(251,191,36,0.15);border:1px solid #fbbf24">分化</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>债券/利率</td>
+            <td><strong>HYG</strong></td>
+            <td>高收益企业债</td>
+            <td>80.0100</td>
+            <td>$28.14亿</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#fbbf24;background:rgba(251,191,36,0.15);border:1px solid #fbbf24">分化</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>债券/利率</td>
+            <td><strong>TLT</strong></td>
+            <td>20+年美国国债</td>
+            <td>86.7500</td>
+            <td>$22.74亿</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>债券/利率</td>
+            <td><strong>SHY</strong></td>
+            <td>1-3年美国国债</td>
+            <td>81.9900</td>
+            <td>$2.70亿</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>债券/利率</td>
+            <td><strong>AGG</strong></td>
+            <td>美国综合债券</td>
+            <td>98.9000</td>
+            <td>$7.93亿</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>大宗商品</td>
+            <td><strong>DBA</strong></td>
+            <td>农产品综合</td>
+            <td>26.6300</td>
+            <td>$3800.19万</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>大宗商品</td>
+            <td><strong>CPER</strong></td>
+            <td>铜</td>
+            <td>38.8600</td>
+            <td>$3202.98万</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>大宗商品</td>
+            <td><strong>SIL</strong></td>
+            <td>银矿股</td>
+            <td>83.7300</td>
+            <td>$1.52亿</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>大宗商品</td>
+            <td><strong>SLV</strong></td>
+            <td>白银</td>
+            <td>59.5100</td>
+            <td>$16.21亿</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>大宗商品</td>
+            <td><strong>DBB</strong></td>
+            <td>基础金属综合</td>
+            <td>25.3000</td>
+            <td>$1116.19万</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>大宗商品</td>
+            <td><strong>DBE</strong></td>
+            <td>能源综合</td>
+            <td>27.4730</td>
+            <td>$179.45万</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>大宗商品</td>
+            <td><strong>JJC</strong></td>
+            <td>铜期货</td>
+            <td>19.5600</td>
+            <td>$81.24万</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>大宗商品</td>
+            <td><strong>URA</strong></td>
+            <td>铀/核能</td>
+            <td>47.7800</td>
+            <td>$2.13亿</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>大宗商品</td>
+            <td><strong>GDX</strong></td>
+            <td>金矿股</td>
+            <td>82.5100</td>
+            <td>$20.85亿</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>大宗商品</td>
+            <td><strong>XOP</strong></td>
+            <td>油气勘探</td>
+            <td>153.3600</td>
+            <td>$6.55亿</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>大宗商品</td>
+            <td><strong>PALL</strong></td>
+            <td>钯金</td>
+            <td>23.2300</td>
+            <td>$1730.80万</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#fb7185;background:rgba(251,113,133,0.15);border:1px solid #fb7185">偏空</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>大宗商品</td>
+            <td><strong>LIT</strong></td>
+            <td>锂</td>
+            <td>82.1500</td>
+            <td>$4977.43万</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#fb7185;background:rgba(251,113,133,0.15);border:1px solid #fb7185">偏空</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>大宗商品</td>
+            <td><strong>REMX</strong></td>
+            <td>稀土</td>
+            <td>95.5500</td>
+            <td>$1.13亿</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#fb7185;background:rgba(251,113,133,0.15);border:1px solid #fb7185">偏空</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>大宗商品</td>
+            <td><strong>COPX</strong></td>
+            <td>铜矿股</td>
+            <td>85.4800</td>
+            <td>$3.74亿</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#fb7185;background:rgba(251,113,133,0.15);border:1px solid #fb7185">偏空</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>大宗商品</td>
+            <td><strong>OIH</strong></td>
+            <td>油气服务</td>
+            <td>385.4900</td>
+            <td>$1.62亿</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#fb7185;background:rgba(251,113,133,0.15);border:1px solid #fb7185">偏空</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>股票指数</td>
+            <td><strong>EFA</strong></td>
+            <td>发达市场</td>
+            <td>104.4100</td>
+            <td>$15.08亿</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>股票指数</td>
+            <td><strong>EEM</strong></td>
+            <td>新兴市场</td>
+            <td>70.7900</td>
+            <td>$21.85亿</td>
+            <td style="text-align:center">2</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>股票指数</td>
+            <td><strong>VGK</strong></td>
+            <td>欧洲</td>
+            <td>88.2700</td>
+            <td>$2.64亿</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>股票指数</td>
+            <td><strong>EWJ</strong></td>
+            <td>日本</td>
+            <td>96.2600</td>
+            <td>$5.65亿</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>股票指数</td>
+            <td><strong>FXI</strong></td>
+            <td>中国</td>
+            <td>33.3000</td>
+            <td>$11.04亿</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>股票指数</td>
+            <td><strong>INDA</strong></td>
+            <td>印度</td>
+            <td>49.5800</td>
+            <td>$3.38亿</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>股票指数</td>
+            <td><strong>XLF</strong></td>
+            <td>金融</td>
+            <td>53.5700</td>
+            <td>$19.62亿</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>股票指数</td>
+            <td><strong>IBB</strong></td>
+            <td>生物科技</td>
+            <td>173.6400</td>
+            <td>$2.47亿</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>股票指数</td>
+            <td><strong>XBI</strong></td>
+            <td>生物科技小盘</td>
+            <td>140.7200</td>
+            <td>$11.57亿</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>股票指数</td>
+            <td><strong>XHB</strong></td>
+            <td>住宅建筑</td>
+            <td>111.0400</td>
+            <td>$2.88亿</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>股票指数</td>
+            <td><strong>XLE</strong></td>
+            <td>能源</td>
+            <td>53.7700</td>
+            <td>$21.99亿</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#fbbf24;background:rgba(251,191,36,0.15);border:1px solid #fbbf24">分化</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>股票指数</td>
+            <td><strong>EWZ</strong></td>
+            <td>巴西</td>
+            <td>33.7300</td>
+            <td>$10.36亿</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>股票指数</td>
+            <td><strong>XLK</strong></td>
+            <td>科技</td>
+            <td>191.4400</td>
+            <td>$26.35亿</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>股票指数</td>
+            <td><strong>XLP</strong></td>
+            <td>必需消费</td>
+            <td>83.3000</td>
+            <td>$10.33亿</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>股票指数</td>
+            <td><strong>XLU</strong></td>
+            <td>公用事业</td>
+            <td>44.7600</td>
+            <td>$9.62亿</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>股票指数</td>
+            <td><strong>XLB</strong></td>
+            <td>原材料</td>
+            <td>51.8100</td>
+            <td>$6.19亿</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>股票指数</td>
+            <td><strong>SMH</strong></td>
+            <td>半导体</td>
+            <td>659.8800</td>
+            <td>$66.06亿</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>股票指数</td>
+            <td><strong>KRE</strong></td>
+            <td>地区银行</td>
+            <td>71.7200</td>
+            <td>$11.08亿</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>股票指数</td>
+            <td><strong>XRT</strong></td>
+            <td>零售</td>
+            <td>86.3900</td>
+            <td>$5.18亿</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>股票指数</td>
+            <td><strong>IWM</strong></td>
+            <td>罗素2000</td>
+            <td>295.5900</td>
+            <td>$81.06亿</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#fb7185;background:rgba(251,113,133,0.15);border:1px solid #fb7185">偏空</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>股票指数</td>
+            <td><strong>XLI</strong></td>
+            <td>工业</td>
+            <td>180.9100</td>
+            <td>$14.24亿</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#fb7185;background:rgba(251,113,133,0.15);border:1px solid #fb7185">偏空</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>股票指数</td>
+            <td><strong>XLV</strong></td>
+            <td>医疗</td>
+            <td>149.4000</td>
+            <td>$15.99亿</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#fb7185;background:rgba(251,113,133,0.15);border:1px solid #fb7185">偏空</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>股票指数</td>
+            <td><strong>VNQ</strong></td>
+            <td>房地产</td>
+            <td>95.5600</td>
+            <td>$2.95亿</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#fb7185;background:rgba(251,113,133,0.15);border:1px solid #fb7185">偏空</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>货币</td>
+            <td><strong>UUP</strong></td>
+            <td>美元指数</td>
+            <td>28.3000</td>
+            <td>$6117.05万</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">美股ETF</td>
+        </tr>
+        <tr>
+            <td>加密货币</td>
+            <td><strong>BNB</strong></td>
+            <td>BNB</td>
+            <td>587.9200</td>
+            <td>$1.26亿</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
+            <td style="text-align:center">Binance</td>
+        </tr>
+        <tr>
+            <td>加密货币</td>
+            <td><strong>OKB</strong></td>
+            <td>OKB</td>
+            <td>75.4100</td>
+            <td>$1.21万</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
+            <td style="text-align:center">Gate.io</td>
+        </tr>
+        <tr>
+            <td>加密货币</td>
+            <td><strong>HYPE</strong></td>
+            <td>HYPE</td>
+            <td>67.9040</td>
+            <td>$9.55亿</td>
+            <td style="text-align:center">1</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
+            <td style="text-align:center">Hyperliquid</td>
+        </tr>
+        <tr>
+            <td>加密货币</td>
+            <td><strong>SOL</strong></td>
+            <td>SOL</td>
+            <td>73.6700</td>
+            <td>$1.91亿</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">Binance</td>
+        </tr>
+        <tr>
+            <td>加密货币</td>
+            <td><strong>XRP</strong></td>
+            <td>XRP</td>
+            <td>1.1429</td>
+            <td>$1.23亿</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">Binance</td>
+        </tr>
+        <tr>
+            <td>加密货币</td>
+            <td><strong>ADA</strong></td>
+            <td>ADA</td>
+            <td>0.161400</td>
+            <td>$3172.70万</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">Binance</td>
+        </tr>
+        <tr>
+            <td>加密货币</td>
+            <td><strong>DOT</strong></td>
+            <td>DOT</td>
+            <td>0.968000</td>
+            <td>$779.85万</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">Binance</td>
+        </tr>
+        <tr>
+            <td>加密货币</td>
+            <td><strong>LINK</strong></td>
+            <td>LINK</td>
+            <td>7.9430</td>
+            <td>$2065.70万</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">Binance</td>
+        </tr>
+        <tr>
+            <td>加密货币</td>
+            <td><strong>AVAX</strong></td>
+            <td>AVAX</td>
+            <td>6.2800</td>
+            <td>$1993.36万</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">Binance</td>
+        </tr>
+        <tr>
+            <td>加密货币</td>
+            <td><strong>DOGE</strong></td>
+            <td>DOGE</td>
+            <td>0.083420</td>
+            <td>$6091.06万</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">Binance</td>
+        </tr>
+        <tr>
+            <td>加密货币</td>
+            <td><strong>LTC</strong></td>
+            <td>LTC</td>
+            <td>45.0700</td>
+            <td>$1440.00万</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">Binance</td>
+        </tr>
+        <tr>
+            <td>加密货币</td>
+            <td><strong>TRX</strong></td>
+            <td>TRX</td>
+            <td>0.326700</td>
+            <td>$4389.99万</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">Binance</td>
+        </tr>
+        <tr>
+            <td>加密货币</td>
+            <td><strong>GT</strong></td>
+            <td>GT</td>
+            <td>6.7100</td>
+            <td>$8.58万</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">Gate.io</td>
+        </tr>
+        <tr>
+            <td>加密货币</td>
+            <td><strong>MNT</strong></td>
+            <td>MNT</td>
+            <td>0.533680</td>
+            <td>$59.65万</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center">0</td>
+            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
+            <td style="text-align:center">Hyperliquid</td>
+        </tr>
+                </tbody>
+            </table>
         </div>
 
         <!-- 评分规则说明 -->
@@ -424,11 +1178,6 @@
             </div>
         </div>
 
-        <!-- 品类筛选按钮 -->
-        <div class="filter-bar">
-            <button class="filter-btn active" data-filter="all">全部</button><button class="filter-btn" data-filter="外汇">外汇 (6)</button><button class="filter-btn" data-filter="债券/利率">债券/利率 (7)</button><button class="filter-btn" data-filter="大宗商品">大宗商品 (15)</button><button class="filter-btn" data-filter="股票指数">股票指数 (23)</button><button class="filter-btn" data-filter="货币">货币 (1)</button><button class="filter-btn" data-filter="加密货币">加密货币 (14)</button>
-        </div>
-
         <!-- 品类信号分布堆叠柱状图 -->
         <div class="chart-section">
             <h2>品类信号分布</h2>
@@ -445,688 +1194,6 @@
         <div class="chart-section">
             <h2>信号热力图</h2>
             <div class="chart-container-tall" id="chart-heatmap"></div>
-        </div>
-
-        <!-- 综合概览表 -->
-        <div class="overview-section">
-            <h2>综合概览表</h2>
-            <table class="overview-table">
-                <thead>
-                    <tr>
-                        <th>品类</th>
-                        <th>代码</th>
-                        <th>名称</th>
-                        <th>当前价格</th>
-                        <th>日均交易额</th>
-                        <th>正分</th>
-                        <th>负分</th>
-                        <th>综合信号</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-        <tr>
-            <td>外汇</td>
-            <td><strong>FXY</strong></td>
-            <td>美元/日元</td>
-            <td>56.8500</td>
-            <td>$986.43万</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
-        </tr>
-        <tr>
-            <td>外汇</td>
-            <td><strong>FXB</strong></td>
-            <td>英镑/美元</td>
-            <td>126.9300</td>
-            <td>$459.37万</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
-        </tr>
-        <tr>
-            <td>外汇</td>
-            <td><strong>FXA</strong></td>
-            <td>澳元/美元</td>
-            <td>69.4500</td>
-            <td>$81.23万</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
-        </tr>
-        <tr>
-            <td>外汇</td>
-            <td><strong>FXF</strong></td>
-            <td>美元/瑞典克朗</td>
-            <td>109.5600</td>
-            <td>$614.51万</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>外汇</td>
-            <td><strong>FXE</strong></td>
-            <td>欧元/美元</td>
-            <td>105.7700</td>
-            <td>$2374.88万</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#fb7185;background:rgba(251,113,133,0.15);border:1px solid #fb7185">偏空</span></td>
-        </tr>
-        <tr>
-            <td>外汇</td>
-            <td><strong>FXC</strong></td>
-            <td>加元/美元</td>
-            <td>69.1451</td>
-            <td>$78.87万</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">2</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#fb7185;background:rgba(251,113,133,0.15);border:1px solid #fb7185">偏空</span></td>
-        </tr>
-        <tr>
-            <td>债券/利率</td>
-            <td><strong>LQD</strong></td>
-            <td>投资级企业债</td>
-            <td>109.0700</td>
-            <td>$28.39亿</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
-        </tr>
-        <tr>
-            <td>债券/利率</td>
-            <td><strong>EMB</strong></td>
-            <td>新兴市场美元债</td>
-            <td>96.7300</td>
-            <td>$6.17亿</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
-        </tr>
-        <tr>
-            <td>债券/利率</td>
-            <td><strong>IEF</strong></td>
-            <td>7-10年美国国债</td>
-            <td>94.3600</td>
-            <td>$7.04亿</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center">2</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#fbbf24;background:rgba(251,191,36,0.15);border:1px solid #fbbf24">分化</span></td>
-        </tr>
-        <tr>
-            <td>债券/利率</td>
-            <td><strong>HYG</strong></td>
-            <td>高收益企业债</td>
-            <td>80.0100</td>
-            <td>$28.14亿</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#fbbf24;background:rgba(251,191,36,0.15);border:1px solid #fbbf24">分化</span></td>
-        </tr>
-        <tr>
-            <td>债券/利率</td>
-            <td><strong>TLT</strong></td>
-            <td>20+年美国国债</td>
-            <td>86.7500</td>
-            <td>$22.74亿</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>债券/利率</td>
-            <td><strong>SHY</strong></td>
-            <td>1-3年美国国债</td>
-            <td>81.9900</td>
-            <td>$2.70亿</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>债券/利率</td>
-            <td><strong>AGG</strong></td>
-            <td>美国综合债券</td>
-            <td>98.9000</td>
-            <td>$7.93亿</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>大宗商品</td>
-            <td><strong>DBA</strong></td>
-            <td>农产品综合</td>
-            <td>26.6300</td>
-            <td>$3800.19万</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
-        </tr>
-        <tr>
-            <td>大宗商品</td>
-            <td><strong>CPER</strong></td>
-            <td>铜</td>
-            <td>38.8600</td>
-            <td>$3202.98万</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
-        </tr>
-        <tr>
-            <td>大宗商品</td>
-            <td><strong>SIL</strong></td>
-            <td>银矿股</td>
-            <td>83.7300</td>
-            <td>$1.52亿</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
-        </tr>
-        <tr>
-            <td>大宗商品</td>
-            <td><strong>SLV</strong></td>
-            <td>白银</td>
-            <td>59.5100</td>
-            <td>$16.21亿</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>大宗商品</td>
-            <td><strong>DBB</strong></td>
-            <td>基础金属综合</td>
-            <td>25.3000</td>
-            <td>$1116.19万</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>大宗商品</td>
-            <td><strong>DBE</strong></td>
-            <td>能源综合</td>
-            <td>27.4730</td>
-            <td>$179.45万</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>大宗商品</td>
-            <td><strong>JJC</strong></td>
-            <td>铜期货</td>
-            <td>19.5600</td>
-            <td>$81.24万</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>大宗商品</td>
-            <td><strong>URA</strong></td>
-            <td>铀/核能</td>
-            <td>47.7800</td>
-            <td>$2.13亿</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>大宗商品</td>
-            <td><strong>GDX</strong></td>
-            <td>金矿股</td>
-            <td>82.5100</td>
-            <td>$20.85亿</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>大宗商品</td>
-            <td><strong>XOP</strong></td>
-            <td>油气勘探</td>
-            <td>153.3600</td>
-            <td>$6.55亿</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>大宗商品</td>
-            <td><strong>PALL</strong></td>
-            <td>钯金</td>
-            <td>23.2300</td>
-            <td>$1730.80万</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#fb7185;background:rgba(251,113,133,0.15);border:1px solid #fb7185">偏空</span></td>
-        </tr>
-        <tr>
-            <td>大宗商品</td>
-            <td><strong>LIT</strong></td>
-            <td>锂</td>
-            <td>82.1500</td>
-            <td>$4977.43万</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#fb7185;background:rgba(251,113,133,0.15);border:1px solid #fb7185">偏空</span></td>
-        </tr>
-        <tr>
-            <td>大宗商品</td>
-            <td><strong>REMX</strong></td>
-            <td>稀土</td>
-            <td>95.5500</td>
-            <td>$1.13亿</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#fb7185;background:rgba(251,113,133,0.15);border:1px solid #fb7185">偏空</span></td>
-        </tr>
-        <tr>
-            <td>大宗商品</td>
-            <td><strong>COPX</strong></td>
-            <td>铜矿股</td>
-            <td>85.4800</td>
-            <td>$3.74亿</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#fb7185;background:rgba(251,113,133,0.15);border:1px solid #fb7185">偏空</span></td>
-        </tr>
-        <tr>
-            <td>大宗商品</td>
-            <td><strong>OIH</strong></td>
-            <td>油气服务</td>
-            <td>385.4900</td>
-            <td>$1.62亿</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#fb7185;background:rgba(251,113,133,0.15);border:1px solid #fb7185">偏空</span></td>
-        </tr>
-        <tr>
-            <td>股票指数</td>
-            <td><strong>EFA</strong></td>
-            <td>发达市场</td>
-            <td>104.4100</td>
-            <td>$15.08亿</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
-        </tr>
-        <tr>
-            <td>股票指数</td>
-            <td><strong>EEM</strong></td>
-            <td>新兴市场</td>
-            <td>70.7900</td>
-            <td>$21.85亿</td>
-            <td style="text-align:center">2</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
-        </tr>
-        <tr>
-            <td>股票指数</td>
-            <td><strong>VGK</strong></td>
-            <td>欧洲</td>
-            <td>88.2700</td>
-            <td>$2.64亿</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
-        </tr>
-        <tr>
-            <td>股票指数</td>
-            <td><strong>EWJ</strong></td>
-            <td>日本</td>
-            <td>96.2600</td>
-            <td>$5.65亿</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
-        </tr>
-        <tr>
-            <td>股票指数</td>
-            <td><strong>FXI</strong></td>
-            <td>中国</td>
-            <td>33.3000</td>
-            <td>$11.04亿</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
-        </tr>
-        <tr>
-            <td>股票指数</td>
-            <td><strong>INDA</strong></td>
-            <td>印度</td>
-            <td>49.5800</td>
-            <td>$3.38亿</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
-        </tr>
-        <tr>
-            <td>股票指数</td>
-            <td><strong>XLF</strong></td>
-            <td>金融</td>
-            <td>53.5700</td>
-            <td>$19.62亿</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
-        </tr>
-        <tr>
-            <td>股票指数</td>
-            <td><strong>IBB</strong></td>
-            <td>生物科技</td>
-            <td>173.6400</td>
-            <td>$2.47亿</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
-        </tr>
-        <tr>
-            <td>股票指数</td>
-            <td><strong>XBI</strong></td>
-            <td>生物科技小盘</td>
-            <td>140.7200</td>
-            <td>$11.57亿</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
-        </tr>
-        <tr>
-            <td>股票指数</td>
-            <td><strong>XHB</strong></td>
-            <td>住宅建筑</td>
-            <td>111.0400</td>
-            <td>$2.88亿</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
-        </tr>
-        <tr>
-            <td>股票指数</td>
-            <td><strong>XLE</strong></td>
-            <td>能源</td>
-            <td>53.7700</td>
-            <td>$21.99亿</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#fbbf24;background:rgba(251,191,36,0.15);border:1px solid #fbbf24">分化</span></td>
-        </tr>
-        <tr>
-            <td>股票指数</td>
-            <td><strong>EWZ</strong></td>
-            <td>巴西</td>
-            <td>33.7300</td>
-            <td>$10.36亿</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>股票指数</td>
-            <td><strong>XLK</strong></td>
-            <td>科技</td>
-            <td>191.4400</td>
-            <td>$26.35亿</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>股票指数</td>
-            <td><strong>XLP</strong></td>
-            <td>必需消费</td>
-            <td>83.3000</td>
-            <td>$10.33亿</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>股票指数</td>
-            <td><strong>XLU</strong></td>
-            <td>公用事业</td>
-            <td>44.7600</td>
-            <td>$9.62亿</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>股票指数</td>
-            <td><strong>XLB</strong></td>
-            <td>原材料</td>
-            <td>51.8100</td>
-            <td>$6.19亿</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>股票指数</td>
-            <td><strong>SMH</strong></td>
-            <td>半导体</td>
-            <td>659.8800</td>
-            <td>$66.06亿</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>股票指数</td>
-            <td><strong>KRE</strong></td>
-            <td>地区银行</td>
-            <td>71.7200</td>
-            <td>$11.08亿</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>股票指数</td>
-            <td><strong>XRT</strong></td>
-            <td>零售</td>
-            <td>86.3900</td>
-            <td>$5.18亿</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>股票指数</td>
-            <td><strong>IWM</strong></td>
-            <td>罗素2000</td>
-            <td>295.5900</td>
-            <td>$81.06亿</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#fb7185;background:rgba(251,113,133,0.15);border:1px solid #fb7185">偏空</span></td>
-        </tr>
-        <tr>
-            <td>股票指数</td>
-            <td><strong>XLI</strong></td>
-            <td>工业</td>
-            <td>180.9100</td>
-            <td>$14.24亿</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#fb7185;background:rgba(251,113,133,0.15);border:1px solid #fb7185">偏空</span></td>
-        </tr>
-        <tr>
-            <td>股票指数</td>
-            <td><strong>XLV</strong></td>
-            <td>医疗</td>
-            <td>149.4000</td>
-            <td>$15.99亿</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#fb7185;background:rgba(251,113,133,0.15);border:1px solid #fb7185">偏空</span></td>
-        </tr>
-        <tr>
-            <td>股票指数</td>
-            <td><strong>VNQ</strong></td>
-            <td>房地产</td>
-            <td>95.5600</td>
-            <td>$2.95亿</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#fb7185;background:rgba(251,113,133,0.15);border:1px solid #fb7185">偏空</span></td>
-        </tr>
-        <tr>
-            <td>货币</td>
-            <td><strong>UUP</strong></td>
-            <td>美元指数</td>
-            <td>28.3000</td>
-            <td>$6117.05万</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>加密货币</td>
-            <td><strong>BNB</strong></td>
-            <td>BNB</td>
-            <td>587.1300</td>
-            <td>$1.25亿</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
-        </tr>
-        <tr>
-            <td>加密货币</td>
-            <td><strong>OKB</strong></td>
-            <td>OKB</td>
-            <td>75.4100</td>
-            <td>$1.20万</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
-        </tr>
-        <tr>
-            <td>加密货币</td>
-            <td><strong>HYPE</strong></td>
-            <td>HYPE</td>
-            <td>70.6410</td>
-            <td>$70.14万</td>
-            <td style="text-align:center">1</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#34d399;background:rgba(52,211,153,0.15);border:1px solid #34d399">偏多</span></td>
-        </tr>
-        <tr>
-            <td>加密货币</td>
-            <td><strong>SOL</strong></td>
-            <td>SOL</td>
-            <td>73.1500</td>
-            <td>$1.88亿</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>加密货币</td>
-            <td><strong>XRP</strong></td>
-            <td>XRP</td>
-            <td>1.1480</td>
-            <td>$1.22亿</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>加密货币</td>
-            <td><strong>ADA</strong></td>
-            <td>ADA</td>
-            <td>0.163100</td>
-            <td>$3151.69万</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>加密货币</td>
-            <td><strong>DOT</strong></td>
-            <td>DOT</td>
-            <td>0.972000</td>
-            <td>$775.81万</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>加密货币</td>
-            <td><strong>LINK</strong></td>
-            <td>LINK</td>
-            <td>7.9640</td>
-            <td>$2057.34万</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>加密货币</td>
-            <td><strong>AVAX</strong></td>
-            <td>AVAX</td>
-            <td>6.2650</td>
-            <td>$1968.92万</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>加密货币</td>
-            <td><strong>DOGE</strong></td>
-            <td>DOGE</td>
-            <td>0.083570</td>
-            <td>$6066.61万</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>加密货币</td>
-            <td><strong>LTC</strong></td>
-            <td>LTC</td>
-            <td>44.5300</td>
-            <td>$1429.16万</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>加密货币</td>
-            <td><strong>TRX</strong></td>
-            <td>TRX</td>
-            <td>0.326700</td>
-            <td>$4360.14万</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>加密货币</td>
-            <td><strong>GT</strong></td>
-            <td>GT</td>
-            <td>6.7100</td>
-            <td>$8.39万</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-        <tr>
-            <td>加密货币</td>
-            <td><strong>MNT</strong></td>
-            <td>MNT</td>
-            <td>0.536400</td>
-            <td>$43.73万</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center">0</td>
-            <td style="text-align:center"><span class="signal-badge" style="color:#94a3b8;background:rgba(148,163,184,0.15);border:1px solid #94a3b8">中性</span></td>
-        </tr>
-                </tbody>
-            </table>
         </div>
 
         <!-- 各品种详细分析卡片 -->
@@ -4707,11 +4774,11 @@
                 <div class="card-info">
                     <div class="info-item">
                         <span class="info-label">当前价格</span>
-                        <span class="info-value">587.1300</span>
+                        <span class="info-value">587.9200</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">日均交易额</span>
-                        <span class="info-value">$1.25亿</span>
+                        <span class="info-value">$1.26亿</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">正分/负分</span>
@@ -4779,7 +4846,7 @@
                     </div>
                     <div class="info-item">
                         <span class="info-label">日均交易额</span>
-                        <span class="info-value">$1.20万</span>
+                        <span class="info-value">$1.21万</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">正分/负分</span>
@@ -4843,11 +4910,11 @@
                 <div class="card-info">
                     <div class="info-item">
                         <span class="info-label">当前价格</span>
-                        <span class="info-value">70.6410</span>
+                        <span class="info-value">67.9040</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">日均交易额</span>
-                        <span class="info-value">$70.14万</span>
+                        <span class="info-value">$9.55亿</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">正分/负分</span>
@@ -4911,11 +4978,11 @@
                 <div class="card-info">
                     <div class="info-item">
                         <span class="info-label">当前价格</span>
-                        <span class="info-value">73.1500</span>
+                        <span class="info-value">73.6700</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">日均交易额</span>
-                        <span class="info-value">$1.88亿</span>
+                        <span class="info-value">$1.91亿</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">正分/负分</span>
@@ -4979,11 +5046,11 @@
                 <div class="card-info">
                     <div class="info-item">
                         <span class="info-label">当前价格</span>
-                        <span class="info-value">1.1480</span>
+                        <span class="info-value">1.1429</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">日均交易额</span>
-                        <span class="info-value">$1.22亿</span>
+                        <span class="info-value">$1.23亿</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">正分/负分</span>
@@ -5047,11 +5114,11 @@
                 <div class="card-info">
                     <div class="info-item">
                         <span class="info-label">当前价格</span>
-                        <span class="info-value">0.163100</span>
+                        <span class="info-value">0.161400</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">日均交易额</span>
-                        <span class="info-value">$3151.69万</span>
+                        <span class="info-value">$3172.70万</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">正分/负分</span>
@@ -5115,11 +5182,11 @@
                 <div class="card-info">
                     <div class="info-item">
                         <span class="info-label">当前价格</span>
-                        <span class="info-value">0.972000</span>
+                        <span class="info-value">0.968000</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">日均交易额</span>
-                        <span class="info-value">$775.81万</span>
+                        <span class="info-value">$779.85万</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">正分/负分</span>
@@ -5183,11 +5250,11 @@
                 <div class="card-info">
                     <div class="info-item">
                         <span class="info-label">当前价格</span>
-                        <span class="info-value">7.9640</span>
+                        <span class="info-value">7.9430</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">日均交易额</span>
-                        <span class="info-value">$2057.34万</span>
+                        <span class="info-value">$2065.70万</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">正分/负分</span>
@@ -5251,11 +5318,11 @@
                 <div class="card-info">
                     <div class="info-item">
                         <span class="info-label">当前价格</span>
-                        <span class="info-value">6.2650</span>
+                        <span class="info-value">6.2800</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">日均交易额</span>
-                        <span class="info-value">$1968.92万</span>
+                        <span class="info-value">$1993.36万</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">正分/负分</span>
@@ -5319,11 +5386,11 @@
                 <div class="card-info">
                     <div class="info-item">
                         <span class="info-label">当前价格</span>
-                        <span class="info-value">0.083570</span>
+                        <span class="info-value">0.083420</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">日均交易额</span>
-                        <span class="info-value">$6066.61万</span>
+                        <span class="info-value">$6091.06万</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">正分/负分</span>
@@ -5387,11 +5454,11 @@
                 <div class="card-info">
                     <div class="info-item">
                         <span class="info-label">当前价格</span>
-                        <span class="info-value">44.5300</span>
+                        <span class="info-value">45.0700</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">日均交易额</span>
-                        <span class="info-value">$1429.16万</span>
+                        <span class="info-value">$1440.00万</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">正分/负分</span>
@@ -5459,7 +5526,7 @@
                     </div>
                     <div class="info-item">
                         <span class="info-label">日均交易额</span>
-                        <span class="info-value">$4360.14万</span>
+                        <span class="info-value">$4389.99万</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">正分/负分</span>
@@ -5527,7 +5594,7 @@
                     </div>
                     <div class="info-item">
                         <span class="info-label">日均交易额</span>
-                        <span class="info-value">$8.39万</span>
+                        <span class="info-value">$8.58万</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">正分/负分</span>
@@ -5591,11 +5658,11 @@
                 <div class="card-info">
                     <div class="info-item">
                         <span class="info-label">当前价格</span>
-                        <span class="info-value">0.536400</span>
+                        <span class="info-value">0.533680</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">日均交易额</span>
-                        <span class="info-value">$43.73万</span>
+                        <span class="info-value">$59.65万</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">正分/负分</span>
@@ -5653,7 +5720,7 @@
         <!-- 页脚 -->
         <div class="footer">
             <p>本报告基于EMA+MACD右侧交易指标自动生成，仅供参考，不构成投资建议</p>
-            <p>数据来源：Binance API / Gate.io API / akshare | 生成时间：<span id="footer-date">2026-06-21 01:06:55</span></p>
+            <p>数据来源：Binance API / Gate.io API / akshare | 生成时间：<span id="footer-date">2026-06-21 13:50:52</span></p>
         </div>
     </div>
 
@@ -7847,8 +7914,8 @@
   {
     "symbol": "BNB",
     "name": "BNB",
-    "current_price": 587.13,
-    "avg_daily_volume_usd": 124748584.48,
+    "current_price": 587.92,
+    "avg_daily_volume_usd": 125512864.06,
     "positive_score": 1,
     "negative_score": 0,
     "composite_signal": "偏多",
@@ -7890,7 +7957,7 @@
     "symbol": "OKB",
     "name": "OKB",
     "current_price": 75.41,
-    "avg_daily_volume_usd": 11982.46,
+    "avg_daily_volume_usd": 12074.67,
     "positive_score": 1,
     "negative_score": 0,
     "composite_signal": "偏多",
@@ -7931,8 +7998,8 @@
   {
     "symbol": "HYPE",
     "name": "HYPE",
-    "current_price": 70.641,
-    "avg_daily_volume_usd": 701350.07,
+    "current_price": 67.904,
+    "avg_daily_volume_usd": 954722505.95,
     "positive_score": 1,
     "negative_score": 0,
     "composite_signal": "偏多",
@@ -7973,8 +8040,8 @@
   {
     "symbol": "SOL",
     "name": "SOL",
-    "current_price": 73.15,
-    "avg_daily_volume_usd": 188078170.53,
+    "current_price": 73.67,
+    "avg_daily_volume_usd": 190828877.36,
     "positive_score": 0,
     "negative_score": 0,
     "composite_signal": "中性",
@@ -8015,8 +8082,8 @@
   {
     "symbol": "XRP",
     "name": "XRP",
-    "current_price": 1.148,
-    "avg_daily_volume_usd": 122046869.82,
+    "current_price": 1.1429,
+    "avg_daily_volume_usd": 122675711.36,
     "positive_score": 0,
     "negative_score": 0,
     "composite_signal": "中性",
@@ -8057,8 +8124,8 @@
   {
     "symbol": "ADA",
     "name": "ADA",
-    "current_price": 0.1631,
-    "avg_daily_volume_usd": 31516852.3,
+    "current_price": 0.1614,
+    "avg_daily_volume_usd": 31726970.88,
     "positive_score": 0,
     "negative_score": 0,
     "composite_signal": "中性",
@@ -8099,8 +8166,8 @@
   {
     "symbol": "DOT",
     "name": "DOT",
-    "current_price": 0.972,
-    "avg_daily_volume_usd": 7758122.17,
+    "current_price": 0.968,
+    "avg_daily_volume_usd": 7798452.61,
     "positive_score": 0,
     "negative_score": 0,
     "composite_signal": "中性",
@@ -8141,8 +8208,8 @@
   {
     "symbol": "LINK",
     "name": "LINK",
-    "current_price": 7.964,
-    "avg_daily_volume_usd": 20573355.89,
+    "current_price": 7.943,
+    "avg_daily_volume_usd": 20656960.93,
     "positive_score": 0,
     "negative_score": 0,
     "composite_signal": "中性",
@@ -8183,8 +8250,8 @@
   {
     "symbol": "AVAX",
     "name": "AVAX",
-    "current_price": 6.265,
-    "avg_daily_volume_usd": 19689203.53,
+    "current_price": 6.28,
+    "avg_daily_volume_usd": 19933599.1,
     "positive_score": 0,
     "negative_score": 0,
     "composite_signal": "中性",
@@ -8225,8 +8292,8 @@
   {
     "symbol": "DOGE",
     "name": "DOGE",
-    "current_price": 0.08357,
-    "avg_daily_volume_usd": 60666050.92,
+    "current_price": 0.08342,
+    "avg_daily_volume_usd": 60910628.29,
     "positive_score": 0,
     "negative_score": 0,
     "composite_signal": "中性",
@@ -8267,8 +8334,8 @@
   {
     "symbol": "LTC",
     "name": "LTC",
-    "current_price": 44.53,
-    "avg_daily_volume_usd": 14291574.01,
+    "current_price": 45.07,
+    "avg_daily_volume_usd": 14400030.13,
     "positive_score": 0,
     "negative_score": 0,
     "composite_signal": "中性",
@@ -8310,7 +8377,7 @@
     "symbol": "TRX",
     "name": "TRX",
     "current_price": 0.3267,
-    "avg_daily_volume_usd": 43601446.22,
+    "avg_daily_volume_usd": 43899910.94,
     "positive_score": 0,
     "negative_score": 0,
     "composite_signal": "中性",
@@ -8352,7 +8419,7 @@
     "symbol": "GT",
     "name": "GT",
     "current_price": 6.71,
-    "avg_daily_volume_usd": 83863.69,
+    "avg_daily_volume_usd": 85790.68,
     "positive_score": 0,
     "negative_score": 0,
     "composite_signal": "中性",
@@ -8393,8 +8460,8 @@
   {
     "symbol": "MNT",
     "name": "MNT",
-    "current_price": 0.5364,
-    "avg_daily_volume_usd": 437271.28,
+    "current_price": 0.53368,
+    "avg_daily_volume_usd": 596462.2,
     "positive_score": 0,
     "negative_score": 0,
     "composite_signal": "中性",

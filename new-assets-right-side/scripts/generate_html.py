@@ -59,6 +59,39 @@ def get_signal_bg(signal):
     return bgs.get(signal, "rgba(148,163,184,0.15)")
 
 
+# 交易所映射表
+BINANCE_SPOT_SYMBOLS = {
+    "BNB", "SOL", "XRP", "ADA", "DOT", "LINK", "AVAX", "DOGE", "LTC", "TRX"
+}
+GATE_IO_SYMBOLS = {
+    "OKB", "GT"
+}
+HYPERLIQUID_SYMBOLS = {
+    "HYPE", "MNT"
+}
+US_ETF_SYMBOLS = {
+    "FXE", "FXY", "FXB", "FXA", "FXC", "FXS", "FXF",
+    "TLT", "SHY", "IEF", "LQD", "HYG", "EMB", "AGG",
+    "SLV", "DBA", "DBB", "DBE", "PALL", "CPER", "JJC", "URA", "LIT", "REMX", "GDX", "SIL", "COPX", "XOP", "OIH",
+    "IWM", "EFA", "EEM", "VGK", "EWJ", "EWZ", "FXI", "INDA", "XLF", "XLK", "XLE", "XLI", "XLP", "XLU", "XLV", "XLB", "VNQ", "SMH", "IBB", "XBI", "KRE", "XRT", "XHB",
+    "UUP"
+}
+
+
+def get_exchanges(symbol):
+    """根据品种代码判断可交易场所"""
+    exchanges = []
+    if symbol in BINANCE_SPOT_SYMBOLS:
+        exchanges.append("Binance")
+    if symbol in GATE_IO_SYMBOLS:
+        exchanges.append("Gate.io")
+    if symbol in HYPERLIQUID_SYMBOLS:
+        exchanges.append("Hyperliquid")
+    if symbol in US_ETF_SYMBOLS:
+        exchanges.append("美股ETF")
+    return " / ".join(exchanges) if exchanges else "N/A"
+
+
 def generate_html(data):
     """生成HTML报告"""
 
@@ -100,6 +133,7 @@ def generate_html(data):
         sig_bg = get_signal_bg(a['composite_signal'])
         vol_str = format_volume(a['avg_daily_volume_usd'])
         price_str = format_price(a['current_price'])
+        exchanges_str = get_exchanges(a['symbol'])
         overview_rows += f"""
         <tr>
             <td>{a['category']}</td>
@@ -110,6 +144,7 @@ def generate_html(data):
             <td style="text-align:center">{a['positive_score']}</td>
             <td style="text-align:center">{a['negative_score']}</td>
             <td style="text-align:center"><span class="signal-badge" style="color:{sig_color};background:{sig_bg};border:1px solid {sig_color}">{a['composite_signal']}</span></td>
+            <td style="text-align:center">{exchanges_str}</td>
         </tr>"""
 
     # 构建品种详情卡片
@@ -555,6 +590,34 @@ def generate_html(data):
             <div class="date-info">报告生成时间：<span id="report-date">{generated_at}</span> | 分析品种：<span id="total-count">{total}</span>个</div>
         </div>
 
+        <!-- 品类筛选按钮 -->
+        <div class="filter-bar">
+            {filter_buttons}
+        </div>
+
+        <!-- 综合概览表 -->
+        <div class="overview-section">
+            <h2>综合概览表</h2>
+            <table class="overview-table">
+                <thead>
+                    <tr>
+                        <th>品类</th>
+                        <th>代码</th>
+                        <th>名称</th>
+                        <th>当前价格</th>
+                        <th>日均交易额</th>
+                        <th>正分</th>
+                        <th>负分</th>
+                        <th>综合信号</th>
+                        <th>可交易场所</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {overview_rows}
+                </tbody>
+            </table>
+        </div>
+
         <!-- 评分规则说明 -->
         <div class="rules-section">
             <h2>评分规则说明</h2>
@@ -624,11 +687,6 @@ def generate_html(data):
             </div>
         </div>
 
-        <!-- 品类筛选按钮 -->
-        <div class="filter-bar">
-            {filter_buttons}
-        </div>
-
         <!-- 品类信号分布堆叠柱状图 -->
         <div class="chart-section">
             <h2>品类信号分布</h2>
@@ -645,28 +703,6 @@ def generate_html(data):
         <div class="chart-section">
             <h2>信号热力图</h2>
             <div class="chart-container-tall" id="chart-heatmap"></div>
-        </div>
-
-        <!-- 综合概览表 -->
-        <div class="overview-section">
-            <h2>综合概览表</h2>
-            <table class="overview-table">
-                <thead>
-                    <tr>
-                        <th>品类</th>
-                        <th>代码</th>
-                        <th>名称</th>
-                        <th>当前价格</th>
-                        <th>日均交易额</th>
-                        <th>正分</th>
-                        <th>负分</th>
-                        <th>综合信号</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {overview_rows}
-                </tbody>
-            </table>
         </div>
 
         <!-- 各品种详细分析卡片 -->
