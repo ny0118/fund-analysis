@@ -51,7 +51,11 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: index.html multi-asset-technical-analysis/ new-assets-right-side/ fund-technical-analysis/
+          path: |
+            index.html
+            multi-asset-technical-analysis/
+            new-assets-right-side/
+            fund-technical-analysis/
 
       - name: Deploy to GitHub Pages
         id: deployment
